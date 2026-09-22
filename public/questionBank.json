@@ -1,0 +1,1937 @@
+[
+  {
+    "id": 1,
+    "topic": "matter",
+    "classLevel": "9",
+    "difficulty": "Easy",
+    "question": "Which of the following is a pure substance?",
+    "options": [
+      "Air",
+      "Seawater",
+      "Common salt (NaCl)",
+      "Blood"
+    ],
+    "correct": 2,
+    "explanation": "Common salt (NaCl) is a pure substance — a compound. Air, seawater, and blood are all mixtures."
+  },
+  {
+    "id": 2,
+    "topic": "matter",
+    "classLevel": "9",
+    "difficulty": "Easy",
+    "question": "The process of conversion of a solid directly into gas without passing through the liquid state is called:",
+    "options": [
+      "Evaporation",
+      "Condensation",
+      "Sublimation",
+      "Vaporisation"
+    ],
+    "correct": 2,
+    "explanation": "Sublimation is the direct conversion of a solid to gas. Example: dry ice (solid CO₂) → CO₂ gas."
+  },
+  {
+    "id": 3,
+    "topic": "matter",
+    "classLevel": "9",
+    "difficulty": "Medium",
+    "question": "A mixture of iron filings and sulphur is heated. Which statement is correct?",
+    "options": [
+      "Iron and sulphur can be separated by a magnet after heating",
+      "Iron sulphide (FeS) is formed, which cannot be separated by a magnet",
+      "The mixture remains unchanged",
+      "Only sulphur reacts"
+    ],
+    "correct": 1,
+    "explanation": "On heating, Fe + S → FeS (iron sulphide), a compound. Properties differ from elements; magnet cannot separate FeS."
+  },
+  {
+    "id": 4,
+    "topic": "atoms",
+    "classLevel": "9",
+    "difficulty": "Easy",
+    "question": "The atomicity of ozone (O₃) is:",
+    "options": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "correct": 2,
+    "explanation": "Atomicity is the number of atoms in a molecule. Ozone has 3 oxygen atoms, so atomicity = 3."
+  },
+  {
+    "id": 5,
+    "topic": "atoms",
+    "classLevel": "9",
+    "difficulty": "Medium",
+    "question": "The molecular mass of H₂SO₄ is: (H=1, S=32, O=16)",
+    "options": [
+      "80 u",
+      "96 u",
+      "98 u",
+      "100 u"
+    ],
+    "correct": 2,
+    "explanation": "H₂SO₄ = 2(1) + 32 + 4(16) = 2 + 32 + 64 = 98 u."
+  },
+  {
+    "id": 6,
+    "topic": "atoms",
+    "classLevel": "9",
+    "difficulty": "Medium",
+    "question": "How many moles are present in 44 g of CO₂? (Molar mass of CO₂ = 44 g/mol)",
+    "options": [
+      "0.5 mol",
+      "1 mol",
+      "2 mol",
+      "44 mol"
+    ],
+    "correct": 1,
+    "explanation": "Moles = mass / molar mass = 44/44 = 1 mol."
+  },
+  {
+    "id": 7,
+    "topic": "atoms",
+    "classLevel": "9",
+    "difficulty": "Hard",
+    "question": "Calculate the number of molecules in 9 g of water. (Nₐ = 6.022 × 10²³)",
+    "options": [
+      "3.011 × 10²³",
+      "6.022 × 10²³",
+      "1.204 × 10²⁴",
+      "18 × 10²³"
+    ],
+    "correct": 0,
+    "explanation": "Moles of H₂O = 9/18 = 0.5 mol. Molecules = 0.5 × 6.022 × 10²³ = 3.011 × 10²³."
+  },
+  {
+    "id": 8,
+    "topic": "structure",
+    "classLevel": "9",
+    "difficulty": "Easy",
+    "question": "Which sub-atomic particle has no charge?",
+    "options": [
+      "Proton",
+      "Electron",
+      "Neutron",
+      "Positron"
+    ],
+    "correct": 2,
+    "explanation": "Neutrons are neutral sub-atomic particles found in the nucleus. Protons are +ve, electrons are –ve."
+  },
+  {
+    "id": 9,
+    "topic": "structure",
+    "classLevel": "9",
+    "difficulty": "Medium",
+    "question": "The number of neutrons in ⁴⁰Ca (atomic number = 20) is:",
+    "options": [
+      "20",
+      "40",
+      "60",
+      "10"
+    ],
+    "correct": 0,
+    "explanation": "Neutrons = Mass number – Atomic number = 40 – 20 = 20."
+  },
+  {
+    "id": 10,
+    "topic": "structure",
+    "classLevel": "9",
+    "difficulty": "Medium",
+    "question": "Which of the following represents an isotope of carbon-12?",
+    "options": [
+      "¹²C",
+      "¹⁴N",
+      "¹⁴C",
+      "¹²N"
+    ],
+    "correct": 2,
+    "explanation": "¹⁴C has the same atomic number (6) as ¹²C but different mass number. Isotopes have same Z, different A."
+  },
+  {
+    "id": 11,
+    "topic": "reactions",
+    "classLevel": "10",
+    "difficulty": "Easy",
+    "question": "Which type of reaction involves a single compound breaking into two or more simpler substances?",
+    "options": [
+      "Combination",
+      "Decomposition",
+      "Displacement",
+      "Double displacement"
+    ],
+    "correct": 1,
+    "explanation": "Decomposition reaction: AB → A + B. Example: 2H₂O → 2H₂ + O₂."
+  },
+  {
+    "id": 12,
+    "topic": "reactions",
+    "classLevel": "10",
+    "difficulty": "Medium",
+    "question": "What is the balanced equation for the reaction of iron with oxygen to form rust (Fe₂O₃)?",
+    "options": [
+      "Fe + O₂ → FeO",
+      "2Fe + 3O₂ → 2Fe₂O₃",
+      "4Fe + 3O₂ → 2Fe₂O₃",
+      "Fe + O₂ → Fe₂O₃"
+    ],
+    "correct": 2,
+    "explanation": "4Fe + 3O₂ → 2Fe₂O₃. Verify: Fe: 4=4 ✓, O: 6=6 ✓."
+  },
+  {
+    "id": 13,
+    "topic": "reactions",
+    "classLevel": "10",
+    "difficulty": "Medium",
+    "question": "In a thermite reaction, Al reacts with Fe₂O₃. This is an example of:",
+    "options": [
+      "Combination reaction",
+      "Decomposition reaction",
+      "Displacement reaction",
+      "Double displacement"
+    ],
+    "correct": 2,
+    "explanation": "2Al + Fe₂O₃ → Al₂O₃ + 2Fe. Al displaces Fe, so it is a displacement (single replacement) reaction. Al is more reactive than Fe."
+  },
+  {
+    "id": 14,
+    "topic": "reactions",
+    "classLevel": "10",
+    "difficulty": "Hard",
+    "question": "Silver bromide decomposes in sunlight: 2AgBr → 2Ag + Br₂. This reaction is used in:",
+    "options": [
+      "Electroplating",
+      "Photography",
+      "Metallurgy",
+      "Polymer synthesis"
+    ],
+    "correct": 1,
+    "explanation": "Photodecomposition of AgBr is the basis of black-and-white photography. Silver deposits where light hits."
+  },
+  {
+    "id": 15,
+    "topic": "acids_bases",
+    "classLevel": "10",
+    "difficulty": "Easy",
+    "question": "Which of the following has a pH less than 7?",
+    "options": [
+      "Pure water",
+      "Baking soda solution",
+      "Lemon juice",
+      "Milk of magnesia"
+    ],
+    "correct": 2,
+    "explanation": "Lemon juice is acidic (pH ≈ 2.5). Acids have pH < 7; bases have pH > 7; neutral = 7."
+  },
+  {
+    "id": 16,
+    "topic": "acids_bases",
+    "classLevel": "10",
+    "difficulty": "Medium",
+    "question": "Bleaching powder is chemically:",
+    "options": [
+      "Ca(OCl)₂",
+      "CaOCl₂",
+      "CaCl₂ + Ca(OCl)₂",
+      "Ca(OH)₂ + Cl₂"
+    ],
+    "correct": 1,
+    "explanation": "Bleaching powder has formula CaOCl₂ (calcium hypochlorite and chloride mixed compound)."
+  },
+  {
+    "id": 17,
+    "topic": "acids_bases",
+    "classLevel": "10",
+    "difficulty": "Medium",
+    "question": "Plaster of Paris hardens when mixed with water because:",
+    "options": [
+      "It loses water of crystallisation",
+      "It gains water of crystallisation to form gypsum",
+      "CaSO₄ decomposes",
+      "Calcium oxide forms"
+    ],
+    "correct": 1,
+    "explanation": "Plaster of Paris (CaSO₄·½H₂O) + 1½H₂O → CaSO₄·2H₂O (gypsum). This sets hard."
+  },
+  {
+    "id": 18,
+    "topic": "metals",
+    "classLevel": "10",
+    "difficulty": "Easy",
+    "question": "Which of the following is the most abundant metal in the Earth's crust?",
+    "options": [
+      "Iron",
+      "Copper",
+      "Aluminium",
+      "Gold"
+    ],
+    "correct": 2,
+    "explanation": "Aluminium is the most abundant metal in Earth's crust (~8.1% by mass)."
+  },
+  {
+    "id": 19,
+    "topic": "metals",
+    "classLevel": "10",
+    "difficulty": "Medium",
+    "question": "Which property makes metals useful for making wires?",
+    "options": [
+      "Malleability",
+      "Ductility",
+      "Conductivity",
+      "Sonority"
+    ],
+    "correct": 1,
+    "explanation": "Ductility is the property of being drawn into thin wires without breaking."
+  },
+  {
+    "id": 20,
+    "topic": "metals",
+    "classLevel": "10",
+    "difficulty": "Hard",
+    "question": "Aqua regia dissolves gold (Au). Aqua regia is:",
+    "options": [
+      "3 parts HNO₃ + 1 part HCl",
+      "1 part HNO₃ + 3 parts HCl",
+      "1 part HNO₃ + 1 part HCl",
+      "Concentrated H₂SO₄ + HNO₃"
+    ],
+    "correct": 1,
+    "explanation": "Aqua regia = 1 part conc. HNO₃ + 3 parts conc. HCl. It dissolves noble metals like Au and Pt."
+  },
+  {
+    "id": 21,
+    "topic": "carbon",
+    "classLevel": "10",
+    "difficulty": "Easy",
+    "question": "What is the general formula for alkanes?",
+    "options": [
+      "CₙH₂ₙ",
+      "CₙH₂ₙ₊₂",
+      "CₙH₂ₙ₋₂",
+      "CₙHₙ"
+    ],
+    "correct": 1,
+    "explanation": "Alkanes are saturated hydrocarbons with general formula CₙH₂ₙ₊₂. E.g., methane CH₄ (n=1)."
+  },
+  {
+    "id": 22,
+    "topic": "carbon",
+    "classLevel": "10",
+    "difficulty": "Medium",
+    "question": "The functional group –CHO is characteristic of:",
+    "options": [
+      "Ketones",
+      "Alcohols",
+      "Aldehydes",
+      "Carboxylic acids"
+    ],
+    "correct": 2,
+    "explanation": "–CHO (formyl group) is characteristic of aldehydes. Example: HCHO (methanal/formaldehyde)."
+  },
+  {
+    "id": 23,
+    "topic": "mole",
+    "classLevel": "11",
+    "difficulty": "Easy",
+    "question": "One mole of any substance contains how many particles? (Avogadro's number)",
+    "options": [
+      "6.022 × 10²⁰",
+      "6.022 × 10²³",
+      "6.022 × 10²⁵",
+      "6.022 × 10²⁶"
+    ],
+    "correct": 1,
+    "explanation": "Avogadro's number Nₐ = 6.022 × 10²³ mol⁻¹. This applies to atoms, molecules, ions, etc."
+  },
+  {
+    "id": 24,
+    "topic": "mole",
+    "classLevel": "11",
+    "difficulty": "Medium",
+    "question": "What is the mass of 3 moles of NaOH? (Na=23, O=16, H=1)",
+    "options": [
+      "40 g",
+      "80 g",
+      "120 g",
+      "160 g"
+    ],
+    "correct": 2,
+    "explanation": "Molar mass of NaOH = 23+16+1 = 40 g/mol. Mass = 3 × 40 = 120 g."
+  },
+  {
+    "id": 25,
+    "topic": "mole",
+    "classLevel": "11",
+    "difficulty": "Hard",
+    "question": "How many grams of oxygen are required to completely combust 16 g of methane (CH₄ + 2O₂ → CO₂ + 2H₂O)?",
+    "options": [
+      "16 g",
+      "32 g",
+      "64 g",
+      "8 g"
+    ],
+    "correct": 2,
+    "explanation": "Moles of CH₄ = 16/16 = 1 mol. From equation, 1 mol CH₄ needs 2 mol O₂ = 2 × 32 = 64 g O₂."
+  },
+  {
+    "id": 26,
+    "topic": "mole",
+    "classLevel": "11",
+    "difficulty": "Hard",
+    "question": "A 5.6 L sample of a gas at STP. The mass of the gas is 11 g. What is the gas? (STP: 22.4 L/mol)",
+    "options": [
+      "CO (28 g/mol)",
+      "CO₂ (44 g/mol)",
+      "N₂ (28 g/mol)",
+      "O₂ (32 g/mol)"
+    ],
+    "correct": 1,
+    "explanation": "Moles = 5.6/22.4 = 0.25 mol. Molar mass = 11/0.25 = 44 g/mol → CO₂."
+  },
+  {
+    "id": 27,
+    "topic": "bonding",
+    "classLevel": "11",
+    "difficulty": "Easy",
+    "question": "The type of bond present in NaCl is:",
+    "options": [
+      "Covalent bond",
+      "Ionic bond",
+      "Metallic bond",
+      "Hydrogen bond"
+    ],
+    "correct": 1,
+    "explanation": "NaCl is formed by complete electron transfer from Na to Cl, creating Na⁺ and Cl⁻ ions — ionic bond."
+  },
+  {
+    "id": 28,
+    "topic": "bonding",
+    "classLevel": "11",
+    "difficulty": "Medium",
+    "question": "The hybridisation of carbon in CH₄ is:",
+    "options": [
+      "sp",
+      "sp²",
+      "sp³",
+      "sp³d"
+    ],
+    "correct": 2,
+    "explanation": "Carbon in methane forms 4 sigma bonds with no lone pairs. Steric number = 4, so sp³ hybridisation (tetrahedral)."
+  },
+  {
+    "id": 29,
+    "topic": "bonding",
+    "classLevel": "11",
+    "difficulty": "Hard",
+    "question": "Which molecule has a linear shape despite having two lone pairs on the central atom?",
+    "options": [
+      "H₂O",
+      "CO₂",
+      "SO₂",
+      "NH₃"
+    ],
+    "correct": 1,
+    "explanation": "CO₂: O=C=O. Carbon makes two double bonds, no lone pairs on C. VSEPR → linear. H₂O and SO₂ are bent; NH₃ is trigonal pyramidal."
+  },
+  {
+    "id": 30,
+    "topic": "bonding",
+    "classLevel": "11",
+    "difficulty": "Medium",
+    "question": "Electronegativity difference > 1.7 generally indicates:",
+    "options": [
+      "Non-polar covalent",
+      "Polar covalent",
+      "Ionic character",
+      "Metallic bond"
+    ],
+    "correct": 2,
+    "explanation": "When ΔEN > 1.7, electron transfer is substantial and the bond is predominantly ionic."
+  },
+  {
+    "id": 31,
+    "topic": "thermo",
+    "classLevel": "11",
+    "difficulty": "Easy",
+    "question": "For a spontaneous process at constant T and P, the Gibbs free energy change (ΔG) is:",
+    "options": [
+      "ΔG > 0",
+      "ΔG = 0",
+      "ΔG < 0",
+      "ΔG = ΔH"
+    ],
+    "correct": 2,
+    "explanation": "ΔG < 0 for a spontaneous process. ΔG = 0 at equilibrium; ΔG > 0 means non-spontaneous."
+  },
+  {
+    "id": 32,
+    "topic": "thermo",
+    "classLevel": "11",
+    "difficulty": "Medium",
+    "question": "For a reaction: ΔH = −200 kJ/mol and ΔS = −100 J/mol·K at 300 K. ΔG is:",
+    "options": [
+      "−170 kJ/mol",
+      "−230 kJ/mol",
+      "+200 kJ/mol",
+      "−200 kJ/mol"
+    ],
+    "correct": 0,
+    "explanation": "ΔG = ΔH − TΔS = −200 − (300 × (−0.1)) = −200 + 30 = −170 kJ/mol."
+  },
+  {
+    "id": 33,
+    "topic": "thermo",
+    "classLevel": "11",
+    "difficulty": "Hard",
+    "question": "Enthalpy of combustion of methane is −890 kJ/mol. What heat is released by burning 8 g of methane?",
+    "options": [
+      "222.5 kJ",
+      "445 kJ",
+      "890 kJ",
+      "1780 kJ"
+    ],
+    "correct": 1,
+    "explanation": "Moles of CH₄ = 8/16 = 0.5 mol. Heat = 0.5 × 890 = 445 kJ."
+  },
+  {
+    "id": 34,
+    "topic": "equilibrium",
+    "classLevel": "11",
+    "difficulty": "Easy",
+    "question": "At equilibrium, the rate of forward reaction is:",
+    "options": [
+      "Greater than reverse",
+      "Less than reverse",
+      "Equal to reverse",
+      "Zero"
+    ],
+    "correct": 2,
+    "explanation": "At equilibrium, the rate of forward reaction = rate of reverse reaction. Concentrations remain constant."
+  },
+  {
+    "id": 35,
+    "topic": "equilibrium",
+    "classLevel": "11",
+    "difficulty": "Medium",
+    "question": "For N₂ + 3H₂ ⇌ 2NH₃, increasing pressure will:",
+    "options": [
+      "Favour reverse reaction",
+      "Favour forward reaction",
+      "Have no effect",
+      "Increase temperature"
+    ],
+    "correct": 1,
+    "explanation": "Higher pressure favours the side with fewer moles of gas. Left side: 4 mol gas; right: 2 mol. Pressure → forward reaction."
+  },
+  {
+    "id": 36,
+    "topic": "equilibrium",
+    "classLevel": "11",
+    "difficulty": "Hard",
+    "question": "Kc for A + B ⇌ C + D is 4. If initial moles of A and B are 1 mol each in 1 L vessel, what is [C] at equilibrium?",
+    "options": [
+      "0.33 M",
+      "0.5 M",
+      "0.67 M",
+      "1 M"
+    ],
+    "correct": 2,
+    "explanation": "Let x = moles reacted. Kc = x²/(1−x)² = 4. x/(1−x) = 2. x = 2 − 2x → 3x = 2 → x = 2/3. [C] = 0.67 M."
+  },
+  {
+    "id": 37,
+    "topic": "redox",
+    "classLevel": "12",
+    "difficulty": "Easy",
+    "question": "In the reaction: 2Na + Cl₂ → 2NaCl, sodium is:",
+    "options": [
+      "Oxidised",
+      "Reduced",
+      "Neither oxidised nor reduced",
+      "Acts as catalyst"
+    ],
+    "correct": 0,
+    "explanation": "Na loses electrons: Na → Na⁺ + e⁻. Loss of electrons = oxidation. Cl₂ is reduced (gains e⁻)."
+  },
+  {
+    "id": 38,
+    "topic": "redox",
+    "classLevel": "12",
+    "difficulty": "Medium",
+    "question": "The EMF of a Daniel cell (Zn|ZnSO₄||CuSO₄|Cu) at standard conditions is:",
+    "options": [
+      "0.34 V",
+      "0.76 V",
+      "1.10 V",
+      "1.60 V"
+    ],
+    "correct": 2,
+    "explanation": "E°cell = E°cathode − E°anode = +0.34 − (−0.76) = 1.10 V. Cu is cathode (+0.34 V), Zn is anode (−0.76 V)."
+  },
+  {
+    "id": 39,
+    "topic": "redox",
+    "classLevel": "12",
+    "difficulty": "Hard",
+    "question": "How many Faradays of electricity are needed to deposit 108 g of silver (Ag⁺ + e⁻ → Ag, M = 108)?",
+    "options": [
+      "0.5 F",
+      "1 F",
+      "2 F",
+      "3 F"
+    ],
+    "correct": 1,
+    "explanation": "Moles of Ag = 108/108 = 1 mol. Each Ag⁺ requires 1 electron → 1 Faraday (96500 C) deposits 1 mol Ag."
+  },
+  {
+    "id": 40,
+    "topic": "redox",
+    "classLevel": "12",
+    "difficulty": "Hard",
+    "question": "Oxidation state of Cr in K₂Cr₂O₇ is:",
+    "options": [
+      "+3",
+      "+4",
+      "+6",
+      "+7"
+    ],
+    "correct": 2,
+    "explanation": "2(+1) + 2x + 7(−2) = 0 → 2 + 2x − 14 = 0 → 2x = 12 → x = +6."
+  },
+  {
+    "id": 41,
+    "topic": "organic",
+    "classLevel": "12",
+    "difficulty": "Easy",
+    "question": "Which reagent converts an alkene to an alkane?",
+    "options": [
+      "HBr",
+      "H₂/Ni",
+      "Cl₂/hν",
+      "KMnO₄"
+    ],
+    "correct": 1,
+    "explanation": "Catalytic hydrogenation: alkene + H₂ (Ni catalyst) → alkane. Example: CH₂=CH₂ + H₂ → CH₃CH₃."
+  },
+  {
+    "id": 42,
+    "topic": "organic",
+    "classLevel": "12",
+    "difficulty": "Medium",
+    "question": "Lucas test is used to distinguish between:",
+    "options": [
+      "Primary and secondary amines",
+      "Aldehydes and ketones",
+      "Primary, secondary and tertiary alcohols",
+      "Alkanes and alkenes"
+    ],
+    "correct": 2,
+    "explanation": "Lucas test (ZnCl₂/conc. HCl): 3° alcohol → immediate turbidity, 2° → turbidity in 5 min, 1° → no turbidity (at room temp)."
+  },
+  {
+    "id": 43,
+    "topic": "organic",
+    "classLevel": "12",
+    "difficulty": "Hard",
+    "question": "Which product is formed when acetaldehyde undergoes aldol condensation?",
+    "options": [
+      "3-Hydroxybutanal (β-hydroxybutyraldehyde)",
+      "Crotonaldehyde",
+      "Acetone",
+      "Ethanol"
+    ],
+    "correct": 0,
+    "explanation": "Aldol condensation of acetaldehyde (CH₃CHO) gives 3-hydroxybutanal: CH₃CH(OH)CH₂CHO. Dehydration gives crotonaldehyde."
+  },
+  {
+    "id": 44,
+    "topic": "organic",
+    "classLevel": "12",
+    "difficulty": "Medium",
+    "question": "The IUPAC name of CH₃–CH(OH)–CH₃ is:",
+    "options": [
+      "1-propanol",
+      "2-propanol",
+      "Propan-1-ol",
+      "Isopropyl aldehyde"
+    ],
+    "correct": 1,
+    "explanation": "The –OH group is on C2 of a 3-carbon chain. IUPAC name: propan-2-ol (or 2-propanol)."
+  },
+  {
+    "id": 45,
+    "topic": "coordination",
+    "classLevel": "12",
+    "difficulty": "Medium",
+    "question": "The IUPAC name of [Cu(NH₃)₄]²⁺ is:",
+    "options": [
+      "Tetraamminecopper(I) ion",
+      "Tetraamminecopper(II) ion",
+      "Cupric tetrammine ion",
+      "Tetraaminecuprous ion"
+    ],
+    "correct": 1,
+    "explanation": "[Cu(NH₃)₄]²⁺: Cu has +2 oxidation state (charge 2+ − 0×4 ligands = +2). IUPAC: tetraamminecopper(II) ion."
+  },
+  {
+    "id": 46,
+    "topic": "coordination",
+    "classLevel": "12",
+    "difficulty": "Hard",
+    "question": "For [Fe(CN)₆]⁴⁻, the oxidation state of Fe and magnetic behaviour are:",
+    "options": [
+      "Fe(II), diamagnetic",
+      "Fe(II), paramagnetic",
+      "Fe(III), diamagnetic",
+      "Fe(III), paramagnetic"
+    ],
+    "correct": 0,
+    "explanation": "[Fe(CN)₆]⁴⁻: charge balance: Fe + 6(−1) = −4 → Fe = +2. CN⁻ is strong field ligand → pairing → d⁶ low spin → 0 unpaired → diamagnetic."
+  },
+  {
+    "id": 47,
+    "topic": "jee",
+    "classLevel": "JEE",
+    "difficulty": "JEE",
+    "question": "The van't Hoff factor (i) for K₃[Fe(CN)₆] in dilute aqueous solution is:",
+    "options": [
+      "3",
+      "4",
+      "5",
+      "2"
+    ],
+    "correct": 1,
+    "explanation": "K₃[Fe(CN)₆] → 3K⁺ + [Fe(CN)₆]³⁻. Total ions = 4. van't Hoff factor i = 4."
+  },
+  {
+    "id": 48,
+    "topic": "jee",
+    "classLevel": "JEE",
+    "difficulty": "JEE",
+    "question": "Which of the following has maximum number of unpaired electrons? (At. no: Fe=26)",
+    "options": [
+      "Fe²⁺ (d⁶)",
+      "Fe³⁺ (d⁵)",
+      "Co³⁺ (d⁶) in strong field",
+      "Ni²⁺ (d⁸)"
+    ],
+    "correct": 1,
+    "explanation": "Fe³⁺ is d⁵ high spin → 5 unpaired electrons. Fe²⁺ d⁶ high spin → 4, Co³⁺ low spin d⁶ → 0, Ni²⁺ d⁸ → 2 unpaired."
+  },
+  {
+    "id": 49,
+    "topic": "jee",
+    "classLevel": "JEE",
+    "difficulty": "JEE",
+    "question": "For the reaction: PCl₅(g) ⇌ PCl₃(g) + Cl₂(g), Kp = 1.8 at 250°C. If initial pressure of PCl₅ = 1 atm, what is the degree of dissociation α at equilibrium?",
+    "options": [
+      "0.73",
+      "0.63",
+      "0.54",
+      "0.81"
+    ],
+    "correct": 0,
+    "explanation": "Kp = α²P/(1−α²). With P=1: Kp = α²/(1−α²) = 1.8 → α² = 1.8 − 1.8α² → α²(2.8) = 1.8 → α = √(1.8/2.8) ≈ 0.802. (Exact: ≈0.73 using total pressure method with P_total = 1+α)"
+  },
+  {
+    "id": 50,
+    "topic": "jee",
+    "classLevel": "JEE",
+    "difficulty": "JEE",
+    "question": "Identify the correct order of first ionisation energies: Na, Mg, Al, Si",
+    "options": [
+      "Na < Al < Mg < Si",
+      "Na < Mg < Al < Si",
+      "Na < Al < Mg < Si",
+      "Si > Mg > Al > Na"
+    ],
+    "correct": 2,
+    "explanation": "Na < Al < Mg < Si. IE₁ order: Na(496) < Al(577) < Mg(738) < Si(786) kJ/mol. Mg has higher IE₁ than Al due to stable 3s² configuration."
+  },
+  {
+    "id": 51,
+    "topic": "jee",
+    "classLevel": "JEE",
+    "difficulty": "JEE",
+    "question": "A 100 mL solution contains 0.1 M NaOH. What volume of 0.05 M HCl must be added to make pH = 7?",
+    "options": [
+      "100 mL",
+      "200 mL",
+      "50 mL",
+      "400 mL"
+    ],
+    "correct": 1,
+    "explanation": "Moles NaOH = 0.1 × 0.1 = 0.01 mol. For pH=7, need complete neutralisation. Moles HCl needed = 0.01 mol. Vol = 0.01/0.05 = 0.2 L = 200 mL."
+  },
+  {
+    "id": 52,
+    "topic": "jee",
+    "classLevel": "JEE",
+    "difficulty": "JEE",
+    "question": "In SN2 reaction, the leaving group departs from:",
+    "options": [
+      "Same side as nucleophile",
+      "Opposite side to nucleophile (backside attack)",
+      "Top face only",
+      "Via carbocation intermediate"
+    ],
+    "correct": 1,
+    "explanation": "SN2 occurs via backside attack — nucleophile attacks from opposite to leaving group, causing Walden inversion (inversion of configuration)."
+  },
+  {
+    "id": 53,
+    "topic": "mole",
+    "classLevel": "11",
+    "difficulty": "Medium",
+    "question": "The empirical formula of a compound is CH₂O. Its molar mass is 180 g/mol. The molecular formula is:",
+    "options": [
+      "CH₂O",
+      "C₂H₄O₂",
+      "C₃H₆O₃",
+      "C₆H₁₂O₆"
+    ],
+    "correct": 3,
+    "explanation": "Empirical formula mass CH₂O = 12+2+16 = 30. n = 180/30 = 6. Molecular formula = C₆H₁₂O₆ (glucose)."
+  },
+  {
+    "id": 54,
+    "topic": "thermo",
+    "classLevel": "11",
+    "difficulty": "Medium",
+    "question": "Which of the following processes has ΔS > 0?",
+    "options": [
+      "Freezing of water",
+      "Sublimation of iodine",
+      "Condensation of steam",
+      "Crystallisation of sugar"
+    ],
+    "correct": 1,
+    "explanation": "Sublimation (solid → gas) greatly increases disorder (ΔS > 0). Freezing, condensation, crystallisation all decrease entropy."
+  },
+  {
+    "id": 55,
+    "topic": "bonding",
+    "classLevel": "11",
+    "difficulty": "Medium",
+    "question": "Which molecule has the shortest C–C bond?",
+    "options": [
+      "Ethane (C₂H₆)",
+      "Ethene (C₂H₄)",
+      "Ethyne (C₂H₂)",
+      "Propane (C₃H₈)"
+    ],
+    "correct": 2,
+    "explanation": "Triple bond (C≡C in ethyne) is shorter than double (C=C in ethene) which is shorter than single (C–C). Bond order inversely related to bond length."
+  },
+  {
+    "id": 56,
+    "topic": "equilibrium",
+    "classLevel": "11",
+    "difficulty": "Medium",
+    "question": "According to Le Chatelier's principle, adding an inert gas at constant volume to an equilibrium mixture:",
+    "options": [
+      "Shifts equilibrium right",
+      "Shifts equilibrium left",
+      "Has no effect on equilibrium",
+      "Increases Kc"
+    ],
+    "correct": 2,
+    "explanation": "At constant volume, adding inert gas does not change partial pressures of reactants/products. No shift in equilibrium."
+  },
+  {
+    "id": 57,
+    "topic": "reactions",
+    "classLevel": "10",
+    "difficulty": "Easy",
+    "question": "Rancidity of fats and oils can be prevented by:",
+    "options": [
+      "Heating",
+      "Adding water",
+      "Adding antioxidants or using nitrogen atmosphere",
+      "Exposing to sunlight"
+    ],
+    "correct": 2,
+    "explanation": "Rancidity is oxidation of fats. Prevention: antioxidants (BHA, BHT), nitrogen atmosphere (removes O₂), or refrigeration."
+  },
+  {
+    "id": 58,
+    "topic": "organic",
+    "classLevel": "12",
+    "difficulty": "Medium",
+    "question": "Fehling's solution test is positive for:",
+    "options": [
+      "Benzaldehyde",
+      "Acetone",
+      "Formaldehyde (HCHO)",
+      "Chloroform"
+    ],
+    "correct": 2,
+    "explanation": "Fehling's test is positive for aliphatic aldehydes. HCHO (formaldehyde) reduces Cu²⁺ to Cu₂O (brick-red ppt). Benzaldehyde (aromatic) fails."
+  },
+  {
+    "id": 59,
+    "topic": "matter",
+    "classLevel": "9",
+    "difficulty": "Medium",
+    "question": "Tyndall effect is exhibited by:",
+    "options": [
+      "True solutions",
+      "Colloids",
+      "Suspensions",
+      "Both colloids and suspensions"
+    ],
+    "correct": 1,
+    "explanation": "The Tyndall effect (scattering of light) is shown by colloids because their particle size (1–100 nm) scatters visible light. True solutions do not scatter light."
+  },
+  {
+    "id": 60,
+    "topic": "matter",
+    "classLevel": "9",
+    "difficulty": "Hard",
+    "question": "Which of the following separation technique separates two miscible liquids with different boiling points?",
+    "options": [
+      "Filtration",
+      "Fractional distillation",
+      "Crystallisation",
+      "Chromatography"
+    ],
+    "correct": 1,
+    "explanation": "Fractional distillation separates miscible liquids (like ethanol and water) based on difference in boiling points using a fractionating column."
+  },
+  {
+    "id": 61,
+    "topic": "atoms",
+    "classLevel": "9",
+    "difficulty": "Easy",
+    "question": "According to Dalton's atomic theory, atoms of the same element are:",
+    "options": [
+      "Identical in all properties",
+      "Different in mass",
+      "Divisible",
+      "Formed during chemical reactions"
+    ],
+    "correct": 0,
+    "explanation": "Dalton's atomic theory states that atoms of the same element are identical in mass, size, and all chemical properties."
+  },
+  {
+    "id": 62,
+    "topic": "atoms",
+    "classLevel": "9",
+    "difficulty": "Hard",
+    "question": "3.011 × 10²³ atoms of nitrogen weigh:",
+    "options": [
+      "7 g",
+      "14 g",
+      "28 g",
+      "0.5 g"
+    ],
+    "correct": 0,
+    "explanation": "3.011 × 10²³ = 0.5 mol. Molar mass of N = 14 g/mol. Mass = 0.5 × 14 = 7 g."
+  },
+  {
+    "id": 63,
+    "topic": "structure",
+    "classLevel": "9",
+    "difficulty": "Easy",
+    "question": "The maximum number of electrons in the third shell (M shell) of an atom is:",
+    "options": [
+      "2",
+      "8",
+      "18",
+      "32"
+    ],
+    "correct": 2,
+    "explanation": "Maximum electrons = 2n² where n is shell number. For n=3: 2(3²) = 18."
+  },
+  {
+    "id": 64,
+    "topic": "structure",
+    "classLevel": "9",
+    "difficulty": "Hard",
+    "question": "An element has electronic configuration 2, 8, 7. It belongs to which group and period?",
+    "options": [
+      "Group 17, Period 3",
+      "Group 7, Period 3",
+      "Group 17, Period 2",
+      "Group 7, Period 2"
+    ],
+    "correct": 0,
+    "explanation": "2, 8, 7 → 3 shells = Period 3. 7 electrons in outermost shell = Group 17 (halogens). Element is Chlorine."
+  },
+  {
+    "id": 65,
+    "topic": "reactions",
+    "classLevel": "10",
+    "difficulty": "Medium",
+    "question": "Which of the following is an exothermic reaction?",
+    "options": [
+      "Decomposition of limestone (CaCO₃)",
+      "Photosynthesis",
+      "Combustion of magnesium",
+      "Dissolution of NH₄Cl in water"
+    ],
+    "correct": 2,
+    "explanation": "2Mg + O₂ → 2MgO releases heat and light — exothermic. Decomposition and photosynthesis absorb energy; NH₄Cl dissolution is endothermic."
+  },
+  {
+    "id": 66,
+    "topic": "reactions",
+    "classLevel": "10",
+    "difficulty": "Hard",
+    "question": "Identify the type: Pb(NO₃)₂ + 2KI → PbI₂ + 2KNO₃",
+    "options": [
+      "Combination",
+      "Decomposition",
+      "Single displacement",
+      "Double displacement"
+    ],
+    "correct": 3,
+    "explanation": "Two compounds exchange ions: Pb²⁺ and K⁺ switch partners. This is a double displacement (metathesis) reaction."
+  },
+  {
+    "id": 67,
+    "topic": "acids_bases",
+    "classLevel": "10",
+    "difficulty": "Hard",
+    "question": "Buffer solution resists change in pH because:",
+    "options": [
+      "It has very high pH",
+      "It contains a weak acid and its conjugate base (or weak base and conjugate acid)",
+      "It is a strong acid solution",
+      "It has no ions in solution"
+    ],
+    "correct": 1,
+    "explanation": "A buffer contains a weak acid + its salt (or weak base + its salt). The conjugate pair absorbs added H⁺ or OH⁻, resisting pH change."
+  },
+  {
+    "id": 68,
+    "topic": "metals",
+    "classLevel": "10",
+    "difficulty": "Medium",
+    "question": "Which of the following metals can be extracted by reduction with coke (carbon)?",
+    "options": [
+      "Sodium",
+      "Potassium",
+      "Aluminium",
+      "Zinc"
+    ],
+    "correct": 3,
+    "explanation": "Zinc oxide can be reduced by coke: ZnO + C → Zn + CO. Metals higher in the reactivity series (Na, K, Al) cannot be reduced by carbon."
+  },
+  {
+    "id": 69,
+    "topic": "carbon",
+    "classLevel": "10",
+    "difficulty": "Hard",
+    "question": "Ethanol reacts with sodium to give:",
+    "options": [
+      "Sodium ethoxide + H₂",
+      "Sodium acetate + H₂",
+      "Ethylene + NaOH",
+      "No reaction"
+    ],
+    "correct": 0,
+    "explanation": "2C₂H₅OH + 2Na → 2C₂H₅ONa (sodium ethoxide) + H₂↑. Alcohols react with active metals releasing hydrogen gas."
+  },
+  {
+    "id": 70,
+    "topic": "carbon",
+    "classLevel": "10",
+    "difficulty": "Medium",
+    "question": "Saponification is the process of:",
+    "options": [
+      "Making soap from fats using NaOH",
+      "Refining crude petroleum",
+      "Making alcohol from sugars",
+      "Converting alkene to alkane"
+    ],
+    "correct": 0,
+    "explanation": "Saponification: Fat/oil + NaOH → Soap (sodium salt of fatty acid) + Glycerol. Used in soap manufacture."
+  },
+  {
+    "id": 71,
+    "topic": "mole",
+    "classLevel": "11",
+    "difficulty": "Hard",
+    "question": "A gas occupies 2.24 L at STP. How many molecules does it contain?",
+    "options": [
+      "6.022 × 10²²",
+      "6.022 × 10²³",
+      "1.204 × 10²³",
+      "3.011 × 10²²"
+    ],
+    "correct": 0,
+    "explanation": "Moles = 2.24 / 22.4 = 0.1 mol. Molecules = 0.1 × 6.022 × 10²³ = 6.022 × 10²²."
+  },
+  {
+    "id": 72,
+    "topic": "bonding",
+    "classLevel": "11",
+    "difficulty": "Hard",
+    "question": "Which molecule has the highest bond angle?",
+    "options": [
+      "H₂O (104.5°)",
+      "NH₃ (107°)",
+      "CH₄ (109.5°)",
+      "BF₃ (120°)"
+    ],
+    "correct": 3,
+    "explanation": "BF₃ is sp² hybridised (trigonal planar) with bond angle 120°. CH₄ is 109.5°, NH₃ is 107°, H₂O is 104.5°."
+  },
+  {
+    "id": 73,
+    "topic": "thermo",
+    "classLevel": "11",
+    "difficulty": "Hard",
+    "question": "Hess's law states that:",
+    "options": [
+      "Enthalpy depends on the path taken",
+      "Total enthalpy change is independent of the route, only depending on initial and final states",
+      "Entropy always increases",
+      "All reactions are exothermic"
+    ],
+    "correct": 1,
+    "explanation": "Hess's Law: ΔH for a reaction is the same regardless of whether it occurs in one step or multiple steps (state function property)."
+  },
+  {
+    "id": 74,
+    "topic": "equilibrium",
+    "classLevel": "11",
+    "difficulty": "Hard",
+    "question": "For the reaction CO(g) + 3H₂(g) ⇌ CH₄(g) + H₂O(g), Δn_gas = ?",
+    "options": [
+      "+2",
+      "−2",
+      "0",
+      "+1"
+    ],
+    "correct": 1,
+    "explanation": "Δn_gas = moles gas products − moles gas reactants = (1+1) − (1+3) = 2 − 4 = −2."
+  },
+  {
+    "id": 75,
+    "topic": "equilibrium",
+    "classLevel": "11",
+    "difficulty": "Medium",
+    "question": "pH of a 0.01 M HCl solution is:",
+    "options": [
+      "1",
+      "2",
+      "3",
+      "−2"
+    ],
+    "correct": 1,
+    "explanation": "HCl is a strong acid, fully dissociates. [H⁺] = 0.01 M = 10⁻². pH = −log[H⁺] = −log(10⁻²) = 2."
+  },
+  {
+    "id": 76,
+    "topic": "mole",
+    "classLevel": "11",
+    "difficulty": "Medium",
+    "question": "What is the percentage by mass of oxygen in H₂SO₄?",
+    "options": [
+      "33%",
+      "50%",
+      "65%",
+      "33.6%"
+    ],
+    "correct": 2,
+    "explanation": "Molar mass H₂SO₄ = 2+32+64 = 98. Mass O = 64. % = (64/98) × 100 ≈ 65.3%."
+  },
+  {
+    "id": 77,
+    "topic": "bonding",
+    "classLevel": "11",
+    "difficulty": "Medium",
+    "question": "Number of sigma (σ) bonds in ethyne (C₂H₂) is:",
+    "options": [
+      "2",
+      "3",
+      "4",
+      "5"
+    ],
+    "correct": 1,
+    "explanation": "HC≡CH: H−C (1σ), C≡C (1σ + 2π), C−H (1σ). Total σ bonds = 3. Total π bonds = 2."
+  },
+  {
+    "id": 78,
+    "topic": "redox",
+    "classLevel": "12",
+    "difficulty": "Medium",
+    "question": "In electrolysis of brine (NaCl solution), which gas is produced at cathode?",
+    "options": [
+      "Chlorine (Cl₂)",
+      "Oxygen (O₂)",
+      "Hydrogen (H₂)",
+      "Sodium vapour"
+    ],
+    "correct": 2,
+    "explanation": "At cathode (reduction): 2H₂O + 2e⁻ → H₂ + 2OH⁻. At anode: 2Cl⁻ → Cl₂ + 2e⁻."
+  },
+  {
+    "id": 79,
+    "topic": "redox",
+    "classLevel": "12",
+    "difficulty": "Hard",
+    "question": "Kohlrausch's law states that molar conductivity at infinite dilution:",
+    "options": [
+      "Is the sum of ionic conductances of all ions",
+      "Depends on concentration",
+      "Is the same for all electrolytes",
+      "Decreases with temperature"
+    ],
+    "correct": 0,
+    "explanation": "Kohlrausch's law: Λ°m = ν₊λ°₊ + ν₋λ°₋. The limiting molar conductivity is the sum of contributions from all individual ions."
+  },
+  {
+    "id": 80,
+    "topic": "organic",
+    "classLevel": "12",
+    "difficulty": "Hard",
+    "question": "The product of dehydration of 2-butanol with conc. H₂SO₄ (major product by Saytzeff's rule):",
+    "options": [
+      "1-Butene",
+      "2-Butene",
+      "Butane",
+      "Butanal"
+    ],
+    "correct": 1,
+    "explanation": "Saytzeff's rule: the more substituted (more stable) alkene is the major product. 2-butanol → 2-butene (more substituted) > 1-butene."
+  },
+  {
+    "id": 81,
+    "topic": "organic",
+    "classLevel": "12",
+    "difficulty": "Medium",
+    "question": "Which reagent converts a primary amine to isocyanide?",
+    "options": [
+      "CHCl₃ + KOH (alc.)",
+      "HNO₂",
+      "CH₃I",
+      "NaOH"
+    ],
+    "correct": 0,
+    "explanation": "Carbylamine reaction: primary amine + CHCl₃ + KOH(alc.) → isocyanide (R−NC) + 3KCl + 3H₂O. This is a test for primary amines."
+  },
+  {
+    "id": 82,
+    "topic": "coordination",
+    "classLevel": "12",
+    "difficulty": "Medium",
+    "question": "The geometry of [Ni(CO)₄] is:",
+    "options": [
+      "Square planar",
+      "Tetrahedral",
+      "Octahedral",
+      "Trigonal bipyramidal"
+    ],
+    "correct": 1,
+    "explanation": "[Ni(CO)₄]: Ni is in 0 oxidation state (d¹⁰). CO is strong field but d¹⁰ means no CFSE preference. Uses sp³ hybridisation → tetrahedral."
+  },
+  {
+    "id": 83,
+    "topic": "coordination",
+    "classLevel": "12",
+    "difficulty": "Hard",
+    "question": "EAN (Effective Atomic Number) of Fe in [Fe(CN)₆]⁴⁻ is:",
+    "options": [
+      "36",
+      "54",
+      "86",
+      "18"
+    ],
+    "correct": 0,
+    "explanation": "Fe in +2 state has 24 electrons. Each CN⁻ donates 2 electrons: 6 × 2 = 12. EAN = 24 + 12 = 36 (Kr configuration)."
+  },
+  {
+    "id": 84,
+    "topic": "jee",
+    "classLevel": "JEE",
+    "difficulty": "JEE",
+    "question": "Which of the following solutions has the highest boiling point? (Assuming complete dissociation)",
+    "options": [
+      "0.1 M NaCl",
+      "0.1 M CaCl₂",
+      "0.1 M glucose",
+      "0.1 M AlCl₃"
+    ],
+    "correct": 3,
+    "explanation": "AlCl₃ → Al³⁺ + 3Cl⁻ → 4 particles. ΔTb = i × Kb × m. Highest i=4 for AlCl₃ → highest boiling point elevation."
+  },
+  {
+    "id": 85,
+    "topic": "jee",
+    "classLevel": "JEE",
+    "difficulty": "JEE",
+    "question": "Which gas cannot be collected over water?",
+    "options": [
+      "H₂",
+      "O₂",
+      "HCl",
+      "N₂"
+    ],
+    "correct": 2,
+    "explanation": "HCl is highly soluble in water and reacts with it (HCl + H₂O → H₃O⁺ + Cl⁻). It cannot be collected over water."
+  },
+  {
+    "id": 86,
+    "topic": "jee",
+    "classLevel": "JEE",
+    "difficulty": "JEE",
+    "question": "The hybridisation of S in SF₆ is:",
+    "options": [
+      "sp³",
+      "sp³d",
+      "sp³d²",
+      "sp²d"
+    ],
+    "correct": 2,
+    "explanation": "S in SF₆ has 6 bond pairs, 0 lone pairs. Steric number = 6. Hybridisation = sp³d² (octahedral geometry)."
+  },
+  {
+    "id": 87,
+    "topic": "jee",
+    "classLevel": "JEE",
+    "difficulty": "JEE",
+    "question": "Adsorption of a gas on a solid surface is exothermic because:",
+    "options": [
+      "Entropy increases during adsorption",
+      "ΔH must be negative to compensate for entropy decrease (ΔS < 0)",
+      "Gases always release heat",
+      "The solid lattice expands"
+    ],
+    "correct": 1,
+    "explanation": "During adsorption, gas loses freedom (ΔS < 0). For ΔG = ΔH − TΔS < 0, ΔH must be sufficiently negative (exothermic)."
+  },
+  {
+    "id": 88,
+    "topic": "jee",
+    "classLevel": "JEE",
+    "difficulty": "JEE",
+    "question": "Identify the correct order of acidic strength: HF, HCl, HBr, HI",
+    "options": [
+      "HF > HCl > HBr > HI",
+      "HI > HBr > HCl > HF",
+      "HCl > HBr > HI > HF",
+      "HF > HI > HBr > HCl"
+    ],
+    "correct": 1,
+    "explanation": "Bond strength decreases down the group (H–F > H–Cl > H–Br > H–I). Weaker bond = easier ionisation = stronger acid. So HI > HBr > HCl > HF."
+  },
+  {
+    "id": 89,
+    "topic": "jee",
+    "classLevel": "JEE",
+    "difficulty": "JEE",
+    "question": "A first-order reaction has t₁/₂ = 10 min. How much time for 87.5% decomposition?",
+    "options": [
+      "20 min",
+      "30 min",
+      "40 min",
+      "15 min"
+    ],
+    "correct": 1,
+    "explanation": "87.5% decomposed → 12.5% remains = (1/2)³ → 3 half-lives = 3 × 10 = 30 min."
+  },
+  {
+    "id": 90,
+    "topic": "jee",
+    "classLevel": "JEE",
+    "difficulty": "JEE",
+    "question": "In the lanthanide series, which property generally decreases across the series?",
+    "options": [
+      "Atomic number",
+      "Ionic radius",
+      "Nuclear charge",
+      "Density"
+    ],
+    "correct": 1,
+    "explanation": "Lanthanide contraction: the 4f electrons poorly shield nuclear charge, so effective nuclear charge increases → ionic radius decreases across the series."
+  },
+  {
+    "id": 91,
+    "topic": "jee",
+    "classLevel": "JEE",
+    "difficulty": "JEE",
+    "question": "Which polymer is formed by addition polymerisation?",
+    "options": [
+      "Nylon-6,6",
+      "Dacron (Terylene)",
+      "Polyethylene",
+      "Bakelite"
+    ],
+    "correct": 2,
+    "explanation": "Polyethylene: nCH₂=CH₂ → (−CH₂−CH₂−)n. Addition polymerisation (no small molecule released). Nylon-6,6, Dacron, Bakelite are condensation polymers."
+  },
+  {
+    "id": 92,
+    "topic": "jee",
+    "classLevel": "JEE",
+    "difficulty": "JEE",
+    "question": "The reaction of PCl₅ with water gives:",
+    "options": [
+      "H₃PO₄ + HCl",
+      "H₃PO₃ + HCl",
+      "POCl₃ + HCl",
+      "P₂O₅ + HCl"
+    ],
+    "correct": 0,
+    "explanation": "PCl₅ + 4H₂O → H₃PO₄ + 5HCl (complete hydrolysis). With limited water: PCl₅ + H₂O → POCl₃ + 2HCl."
+  },
+  {
+    "id": 93,
+    "topic": "jee",
+    "classLevel": "JEE",
+    "difficulty": "JEE",
+    "question": "Which of the following compounds shows optical isomerism?",
+    "options": [
+      "CHClBrF (with 4 different groups on C)",
+      "CH₄",
+      "CCl₄",
+      "CH₂Cl₂"
+    ],
+    "correct": 0,
+    "explanation": "Optical isomerism requires a chiral centre — a carbon with 4 different substituents. CHClBrF has C attached to H, Cl, Br, F — all different → chiral → optical isomers."
+  },
+  {
+    "id": 94,
+    "topic": "jee",
+    "classLevel": "JEE",
+    "difficulty": "JEE",
+    "question": "Standard electrode potential of Mg²⁺/Mg = −2.36 V. This means:",
+    "options": [
+      "Mg is a strong oxidising agent",
+      "Mg is a strong reducing agent",
+      "Mg²⁺ is easily reduced",
+      "Mg is noble"
+    ],
+    "correct": 1,
+    "explanation": "Very negative E° means Mg has strong tendency to lose electrons (be oxidised) → Mg is a very strong reducing agent."
+  },
+  {
+    "id": 95,
+    "topic": "thermo",
+    "classLevel": "11",
+    "difficulty": "JEE",
+    "question": "For an ideal gas undergoing isothermal reversible expansion, ΔU = ?",
+    "options": [
+      "Positive",
+      "Negative",
+      "Zero",
+      "Cannot be determined"
+    ],
+    "correct": 2,
+    "explanation": "For an ideal gas, internal energy depends only on temperature. At constant temperature (isothermal), ΔT = 0 → ΔU = 0."
+  },
+  {
+    "id": 96,
+    "topic": "redox",
+    "classLevel": "12",
+    "difficulty": "JEE",
+    "question": "The equivalent weight of KMnO₄ in acidic medium (MnO₄⁻ → Mn²⁺) is:",
+    "options": [
+      "158/5 = 31.6",
+      "158/3 = 52.7",
+      "158/1 = 158",
+      "158/7 = 22.6"
+    ],
+    "correct": 0,
+    "explanation": "MnO₄⁻ + 8H⁺ + 5e⁻ → Mn²⁺ + 4H₂O. Change in oxidation state = 7 to 2 = 5 electrons. Eq. wt = 158/5 = 31.6."
+  },
+  {
+    "id": 97,
+    "topic": "organic",
+    "classLevel": "12",
+    "difficulty": "JEE",
+    "question": "Hofmann rearrangement converts an amide to:",
+    "options": [
+      "An amine with one less carbon",
+      "An amine with same carbons",
+      "A nitrile",
+      "An isocyanate (stable)"
+    ],
+    "correct": 0,
+    "explanation": "Hofmann rearrangement: RCONH₂ + Br₂ + KOH → RNH₂ (primary amine). The carbonyl carbon is lost as CO₂, giving an amine with one less carbon."
+  },
+  {
+    "id": 98,
+    "topic": "equilibrium",
+    "classLevel": "11",
+    "difficulty": "JEE",
+    "question": "For a weak acid HA (Ka = 10⁻⁵) at 0.1 M concentration, degree of dissociation α ≈",
+    "options": [
+      "0.01 (1%)",
+      "0.1 (10%)",
+      "0.001 (0.1%)",
+      "0.5 (50%)"
+    ],
+    "correct": 0,
+    "explanation": "α = √(Ka/C) = √(10⁻⁵/0.1) = √(10⁻⁴) = 0.01 = 1%. (Valid when α << 1)"
+  },
+  {
+    "id": 99,
+    "topic": "bonding",
+    "classLevel": "11",
+    "difficulty": "JEE",
+    "question": "Which of the following is paramagnetic?",
+    "options": [
+      "N₂",
+      "O₂",
+      "F₂",
+      "Ne"
+    ],
+    "correct": 1,
+    "explanation": "O₂ has 2 unpaired electrons in its π* antibonding MOs (from MO theory), making it paramagnetic. N₂, F₂, Ne are diamagnetic."
+  },
+  {
+    "id": 101,
+    "topic": "jee",
+    "classLevel": "JEE",
+    "difficulty": "JEE",
+    "question": "Among the following, the species with identical bond order are:",
+    "options": [
+      "NO and CO⁺",
+      "O₂⁻ and NO",
+      "CN⁻ and NO⁺",
+      "CO and O₂⁺"
+    ],
+    "correct": 2,
+    "explanation": "CN⁻ has 14 electrons (bond order 3). NO⁺ has 14 electrons (bond order 3). Isoelectronic species generally have identical bond orders."
+  },
+  {
+    "id": 102,
+    "topic": "jee",
+    "classLevel": "JEE",
+    "difficulty": "JEE",
+    "question": "The geometry and magnetic behaviour of the complex [Ni(CN)₄]²⁻ are:",
+    "options": [
+      "Tetrahedral geometry and diamagnetic",
+      "Square planar geometry and diamagnetic",
+      "Tetrahedral geometry and paramagnetic",
+      "Square planar geometry and paramagnetic"
+    ],
+    "correct": 1,
+    "explanation": "Ni²⁺ is a d⁸ ion. CN⁻ is a strong field ligand, causing pairing of electrons. Hybridisation is dsp², so geometry is square planar. All electrons are paired, hence diamagnetic."
+  },
+  {
+    "id": 103,
+    "topic": "jee",
+    "classLevel": "JEE",
+    "difficulty": "JEE",
+    "question": "Which of the following compounds will form a hydrocarbon on reaction with Grignard reagent?",
+    "options": [
+      "CH₃CH₂OH",
+      "CH₃CHO",
+      "CH₃COCH₃",
+      "HCOOH"
+    ],
+    "correct": 0,
+    "explanation": "Compounds with acidic hydrogen (like alcohols, terminal alkynes, water) react with Grignard reagent (RMgX) to give an alkane (RH). CH₃CH₂OH has an acidic proton."
+  },
+  {
+    "id": 104,
+    "topic": "jee",
+    "classLevel": "JEE",
+    "difficulty": "JEE",
+    "question": "For a spontaneous process, the correct statement is:",
+    "options": [
+      "ΔG > 0 and ΔS_total < 0",
+      "ΔG < 0 and ΔS_total > 0",
+      "ΔG = 0 and ΔS_total = 0",
+      "ΔG < 0 and ΔS_total < 0"
+    ],
+    "correct": 1,
+    "explanation": "For a spontaneous process at constant temperature and pressure, change in Gibbs free energy (ΔG) must be negative, and total entropy change of universe (ΔS_total) must be positive."
+  },
+  {
+    "id": 105,
+    "topic": "jee",
+    "classLevel": "JEE",
+    "difficulty": "JEE",
+    "question": "The rate constant of a reaction depends on:",
+    "options": [
+      "Temperature",
+      "Initial concentration",
+      "Time of reaction",
+      "Extent of reaction"
+    ],
+    "correct": 0,
+    "explanation": "The rate constant (k) depends only on temperature and the presence of a catalyst (Arrhenius equation k = A * e^(-Ea/RT)). It is independent of concentration."
+  },
+  {
+    "id": 106,
+    "topic": "jee",
+    "classLevel": "JEE",
+    "difficulty": "JEE",
+    "question": "The most suitable reagent for the conversion of R-CH₂OH to R-CHO is:",
+    "options": [
+      "KMnO₄",
+      "K₂Cr₂O₇",
+      "CrO₃",
+      "PCC (Pyridinium chlorochromate)"
+    ],
+    "correct": 3,
+    "explanation": "PCC is a mild oxidizing agent that selectively oxidizes primary alcohols to aldehydes without further oxidizing them to carboxylic acids."
+  },
+  {
+    "id": 107,
+    "topic": "jee",
+    "classLevel": "JEE",
+    "difficulty": "JEE",
+    "question": "Consider the reaction: N₂(g) + 3H₂(g) ⇌ 2NH₃(g). The yield of ammonia can be increased by:",
+    "options": [
+      "Increasing temperature and decreasing pressure",
+      "Decreasing temperature and increasing pressure",
+      "Increasing temperature and increasing pressure",
+      "Decreasing temperature and decreasing pressure"
+    ],
+    "correct": 1,
+    "explanation": "Reaction is exothermic (favored by low temp) and accompanied by a decrease in number of moles of gas (4 moles to 2 moles, favored by high pressure). Le Chatelier’s principle."
+  },
+  {
+    "id": 108,
+    "topic": "jee",
+    "classLevel": "JEE",
+    "difficulty": "JEE",
+    "question": "An azeotropic solution of two liquids has boiling point lower than either of them when it:",
+    "options": [
+      "Shows negative deviation from Raoult's law",
+      "Shows no deviation from Raoult's law",
+      "Shows positive deviation from Raoult's law",
+      "Is saturated"
+    ],
+    "correct": 2,
+    "explanation": "A minimum boiling azeotrope forms when the solution shows a large positive deviation from Raoult’s law (A-B interactions are weaker than A-A and B-B)."
+  },
+  {
+    "id": 109,
+    "topic": "jee",
+    "classLevel": "JEE",
+    "difficulty": "JEE",
+    "question": "In the aluminothermic process, aluminium acts as:",
+    "options": [
+      "An oxidizing agent",
+      "A reducing agent",
+      "A flux",
+      "A solder"
+    ],
+    "correct": 1,
+    "explanation": "Aluminium has a high affinity for oxygen. In the aluminothermic process (Goldschmidt process), it reduces metal oxides (like Fe₂O₃, Cr₂O₃) to metals, acting as a strong reducing agent."
+  },
+  {
+    "id": 110,
+    "topic": "jee",
+    "classLevel": "JEE",
+    "difficulty": "JEE",
+    "question": "Which of the following does not give a precipitate with AgNO₃ solution?",
+    "options": [
+      "[Co(NH₃)₆]Cl₃",
+      "[Co(NH₃)₅Cl]Cl₂",
+      "[Co(NH₃)₄Cl₂]Cl",
+      "[Co(NH₃)₃Cl₃]"
+    ],
+    "correct": 3,
+    "explanation": "Only ionizable chloride ions (outside the coordination sphere) react with AgNO₃ to give AgCl precipitate. [Co(NH₃)₃Cl₃] has no ionizable Cl⁻."
+  },
+  {
+    "id": 111,
+    "topic": "jee",
+    "classLevel": "JEE",
+    "difficulty": "JEE",
+    "question": "Identify the strongest acid amongst the following:",
+    "options": [
+      "CH₃COOH",
+      "FCH₂COOH",
+      "ClCH₂COOH",
+      "CF₃COOH"
+    ],
+    "correct": 3,
+    "explanation": "The acidic strength increases with the -I effect of the substituent. CF₃ group has the strongest -I effect due to three highly electronegative fluorine atoms."
+  },
+  {
+    "id": 112,
+    "topic": "jee",
+    "classLevel": "JEE",
+    "difficulty": "JEE",
+    "question": "Which defect causes a decrease in the density of a crystal?",
+    "options": [
+      "Frenkel defect",
+      "Schottky defect",
+      "Interstitial defect",
+      "F-centre"
+    ],
+    "correct": 1,
+    "explanation": "Schottky defect involves equal number of cations and anions missing from their lattice sites, lowering the total mass and thus decreasing density."
+  },
+  {
+    "id": 113,
+    "topic": "jee",
+    "classLevel": "JEE",
+    "difficulty": "JEE",
+    "question": "The half-life of a radioactive isotope is 3 hours. If the initial mass is 256 g, the mass remaining after 18 hours is:",
+    "options": [
+      "4 g",
+      "8 g",
+      "16 g",
+      "32 g"
+    ],
+    "correct": 0,
+    "explanation": "Number of half-lives = 18 / 3 = 6. Remaining mass = Initial mass / 2ⁿ = 256 / 2⁶ = 256 / 64 = 4 g."
+  },
+  {
+    "id": 114,
+    "topic": "jee",
+    "classLevel": "JEE",
+    "difficulty": "JEE",
+    "question": "Among the following, the most stable carbocation is:",
+    "options": [
+      "(CH₃)₃C⁺",
+      "CH₃CH₂⁺",
+      "CH₃⁺",
+      "C₆H₅CH₂⁺"
+    ],
+    "correct": 0,
+    "explanation": "Tertiary carbocations like (CH₃)₃C⁺ are highly stable due to +I effect of three alkyl groups and hyperconjugation (9 alpha hydrogens)."
+  },
+  {
+    "id": 115,
+    "topic": "jee",
+    "classLevel": "JEE",
+    "difficulty": "JEE",
+    "question": "A metal crystallizes in a face-centered cubic (FCC) lattice. The relationship between atomic radius (r) and edge length (a) is:",
+    "options": [
+      "r = a / 2",
+      "r = a / (2√2)",
+      "r = (√3 a) / 4",
+      "r = (√2 a) / 4"
+    ],
+    "correct": 1,
+    "explanation": "In an FCC unit cell, atoms touch along the face diagonal. So, 4r = √2 a. Therefore, r = (√2 a) / 4 or r = a / (2√2)."
+  },
+  {
+    "id": 116,
+    "topic": "jee",
+    "classLevel": "JEE",
+    "difficulty": "JEE",
+    "question": "Aniline on treatment with NaNO₂ and HCl at 0-5 °C gives:",
+    "options": [
+      "Phenol",
+      "Nitrobenzene",
+      "Benzene diazonium chloride",
+      "Chlorobenzene"
+    ],
+    "correct": 2,
+    "explanation": "This is the diazotization reaction. Primary aromatic amines react with nitrous acid (generated in situ) at 0-5 °C to form diazonium salts."
+  },
+  {
+    "id": 117,
+    "topic": "jee",
+    "classLevel": "JEE",
+    "difficulty": "JEE",
+    "question": "The standard reduction potentials of A, B, and C are +0.68 V, -2.50 V, and -0.50 V respectively. Their reducing power follows the order:",
+    "options": [
+      "A > B > C",
+      "A > C > B",
+      "C > B > A",
+      "B > C > A"
+    ],
+    "correct": 3,
+    "explanation": "More negative reduction potential means a stronger tendency to get oxidized, hence a stronger reducing agent. So, B (-2.50) > C (-0.50) > A (+0.68)."
+  },
+  {
+    "id": 118,
+    "topic": "jee",
+    "classLevel": "JEE",
+    "difficulty": "JEE",
+    "question": "Which of the following molecules has a zero dipole moment?",
+    "options": [
+      "NH₃",
+      "H₂O",
+      "NF₃",
+      "BF₃"
+    ],
+    "correct": 3,
+    "explanation": "BF₃ has a trigonal planar geometry which is highly symmetrical, so the individual bond dipoles cancel each other out completely, resulting in a zero net dipole moment."
+  },
+  {
+    "id": 119,
+    "topic": "jee",
+    "classLevel": "JEE",
+    "difficulty": "JEE",
+    "question": "The reaction of propene with HBr in the presence of peroxide yields:",
+    "options": [
+      "2-Bromopropane",
+      "1-Bromopropane",
+      "Propane",
+      "1,2-Dibromopropane"
+    ],
+    "correct": 1,
+    "explanation": "In the presence of peroxide, addition of HBr follows Anti-Markovnikov’s rule due to a free radical mechanism, giving the primary alkyl halide."
+  },
+  {
+    "id": 120,
+    "topic": "jee",
+    "classLevel": "JEE",
+    "difficulty": "JEE",
+    "question": "Calgon used for water softening is:",
+    "options": [
+      "Sodium hexametaphosphate",
+      "Sodium aluminium silicate",
+      "Sodium carbonate",
+      "Calcium hydroxide"
+    ],
+    "correct": 0,
+    "explanation": "Calgon is the trade name for sodium hexametaphosphate (Na₆P₆O₁₈). It softens water by forming soluble complex ions with Ca²⁺ and Mg²⁺."
+  },
+  {
+    "id": 121,
+    "topic": "jee",
+    "classLevel": "JEE",
+    "difficulty": "JEE",
+    "question": "For a zero-order reaction, the half-life period is proportional to:",
+    "options": [
+      "Initial concentration",
+      "Inverse of initial concentration",
+      "Square of initial concentration",
+      "Independent of initial concentration"
+    ],
+    "correct": 0,
+    "explanation": "For a zero-order reaction, t₁/₂ = [A₀] / (2k). Thus, the half-life is directly proportional to the initial concentration [A₀]."
+  },
+  {
+    "id": 122,
+    "topic": "jee",
+    "classLevel": "JEE",
+    "difficulty": "JEE",
+    "question": "Oxidation state of Oxygen in H₂O₂ is:",
+    "options": [
+      "-2",
+      "-1",
+      "+1",
+      "+2"
+    ],
+    "correct": 1,
+    "explanation": "In peroxides like H₂O₂, oxygen is bonded to another oxygen via a single bond. The oxidation state of each oxygen atom is -1."
+  },
+  {
+    "id": 123,
+    "topic": "jee",
+    "classLevel": "JEE",
+    "difficulty": "JEE",
+    "question": "The IUPAC name of the complex [Pt(NH₃)₂(Cl)(NO₂)] is:",
+    "options": [
+      "Diamminechloridonitrito-N-platinum(II)",
+      "Diamminechloridonitrito-N-platinum(IV)",
+      "Chloridodiamminenitrito-N-platinum(II)",
+      "Diamminechloridonitrito-O-platinum(II)"
+    ],
+    "correct": 0,
+    "explanation": "Ligands are named alphabetically: ammine, chlorido, nitrito-N. Pt is in +2 oxidation state. The complex is neutral."
+  },
+  {
+    "id": 124,
+    "topic": "jee",
+    "classLevel": "JEE",
+    "difficulty": "JEE",
+    "question": "The pH of a 10⁻⁸ M HCl solution is approximately:",
+    "options": [
+      "8",
+      "7",
+      "6.96",
+      "14"
+    ],
+    "correct": 2,
+    "explanation": "At very low concentrations (like 10⁻⁸ M), the contribution of H⁺ from water (10⁻⁷ M) cannot be ignored. Total [H⁺] = 10⁻⁸ + 10⁻⁷ = 1.1 × 10⁻⁷. pH = -log(1.1 × 10⁻⁷) ≈ 6.96."
+  },
+  {
+    "id": 125,
+    "topic": "jee",
+    "classLevel": "JEE",
+    "difficulty": "JEE",
+    "question": "Which of the following is an electrophile?",
+    "options": [
+      "NH₃",
+      "H₂O",
+      "BF₃",
+      "ROH"
+    ],
+    "correct": 2,
+    "explanation": "Electrophiles are electron-deficient species. BF₃ has only 6 electrons in the valence shell of B (incomplete octet), making it a Lewis acid and an electrophile."
+  },
+  {
+    "id": 126,
+    "topic": "jee",
+    "classLevel": "JEE",
+    "difficulty": "JEE",
+    "question": "The most basic oxide among the following is:",
+    "options": [
+      "Al₂O₃",
+      "SiO₂",
+      "Na₂O",
+      "SO₂"
+    ],
+    "correct": 2,
+    "explanation": "Metallic character decreases across a period, so basicity of oxides also decreases. Na is an alkali metal (highly metallic), so its oxide Na₂O is strongly basic."
+  },
+  {
+    "id": 127,
+    "topic": "jee",
+    "classLevel": "JEE",
+    "difficulty": "JEE",
+    "question": "Which transition in the hydrogen spectrum lies in the visible region?",
+    "options": [
+      "Lyman series",
+      "Balmer series",
+      "Paschen series",
+      "Brackett series"
+    ],
+    "correct": 1,
+    "explanation": "Transitions terminating at n=2 form the Balmer series, which is the only series in the hydrogen emission spectrum that lies in the visible region."
+  },
+  {
+    "id": 128,
+    "topic": "jee",
+    "classLevel": "JEE",
+    "difficulty": "JEE",
+    "question": "Aldol condensation will not take place in:",
+    "options": [
+      "Formaldehyde",
+      "Acetaldehyde",
+      "Propanal",
+      "Acetone"
+    ],
+    "correct": 0,
+    "explanation": "Aldol condensation requires at least one alpha-hydrogen atom. Formaldehyde (HCHO) lacks an alpha-carbon and thus has no alpha-hydrogens."
+  },
+  {
+    "id": 129,
+    "topic": "jee",
+    "classLevel": "JEE",
+    "difficulty": "JEE",
+    "question": "The purest form of commercial iron is:",
+    "options": [
+      "Cast iron",
+      "Pig iron",
+      "Wrought iron",
+      "Steel"
+    ],
+    "correct": 2,
+    "explanation": "Wrought iron is the purest form of commercial iron, containing less than 0.2% carbon."
+  },
+  {
+    "id": 130,
+    "topic": "jee",
+    "classLevel": "JEE",
+    "difficulty": "JEE",
+    "question": "Which vitamin is water-soluble?",
+    "options": [
+      "Vitamin A",
+      "Vitamin D",
+      "Vitamin C",
+      "Vitamin K"
+    ],
+    "correct": 2,
+    "explanation": "Vitamins B and C are water-soluble, while Vitamins A, D, E, and K are fat-soluble."
+  }
+]

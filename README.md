@@ -1,13 +1,13 @@
-# 🚀 ZPeriod – Interactive Web Application  
+# 🚀 Valenzy – Interactive Web Application  
 
-🔗 **Live Demo:** https://zperiod.vercel.app/  
+🔗 **Live Demo:** https://valenzy.vercel.app/  
 📂 **GitHub Repo:** https://github.com/thomas2570/-Zperiod  
 
 ---
 
 ## 📌 About The Project  
 
-**ZPeriod** is a simple and interactive web application built using **HTML, CSS, and JavaScript**.  
+**Valenzy** is a simple and interactive web application built using **HTML, CSS, and JavaScript**.  
 
 This project focuses on demonstrating **frontend development skills**, including user input handling, dynamic output generation, and clean UI design.  
 

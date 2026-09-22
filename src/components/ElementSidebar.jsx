@@ -182,7 +182,7 @@ export default function ElementSidebar() {
                       <span style={{ background: 'rgba(0,0,0,0.1)', padding: '2px 8px', borderRadius: 12, fontSize: 11, fontWeight: 800 }}>+7</span>
                     </div>
                   </InnerCard>
-                  <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '16px 20px', background: 'rgba(255,255,255,0.4)', padding: 16, borderRadius: 16, flex: 1 }}>
+                  <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(100px, 1fr))', gap: '16px 20px', background: 'rgba(255,255,255,0.4)', padding: 16, borderRadius: 16, flex: 1 }}>
                     <div><div style={{ fontSize:9, fontWeight:800, color:'rgba(0,0,0,0.5)' }}>1ST IONIZATION</div><div style={{ fontSize:13, fontWeight:800 }}>717 <span style={{fontSize:10,fontWeight:600}}>kJ/mol</span></div></div>
                     <div><div style={{ fontSize:9, fontWeight:800, color:'rgba(0,0,0,0.5)' }}>ELECTRON AFFINITY</div><div style={{ fontSize:13, fontWeight:800 }}>N/A <span style={{fontSize:10,fontWeight:600}}>kJ/mol</span></div></div>
                     <div><div style={{ fontSize:9, fontWeight:800, color:'rgba(0,0,0,0.5)' }}>ELECTRONEGATIVITY</div><div style={{ fontSize:13, fontWeight:800 }}>{el.electronegativity_pauling || 'N/A'}</div></div>

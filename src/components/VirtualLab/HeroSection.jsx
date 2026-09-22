@@ -68,7 +68,7 @@ export default function HeroSection() {
           transition={{ duration: 0.8 }}
         >
           <div className="inline-block px-4 py-1.5 rounded-full bg-sky-500/10 border border-sky-500/20 text-sky-400 font-semibold text-sm mb-6">
-            Zperiod Labs v1.0
+            Valenzy Labs v1.0
           </div>
           <h1 className="text-5xl md:text-7xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-white via-sky-100 to-slate-400 mb-6 drop-shadow-sm">
             Virtual Science <br/> Laboratory

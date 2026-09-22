@@ -110,7 +110,7 @@ export default function GasLawsSimulator() {
 
       <div style={{ padding:'28px 40px 36px' }}>
         {/* Law selector */}
-        <div style={{ display:'grid', gridTemplateColumns:'1fr 1fr', gap:8, marginBottom:24 }}>
+        <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fit, minmax(180px, 1fr))', gap:8, marginBottom:24 }}>
           {LAWS.map(l => (
             <button key={l.id} onClick={() => { setLaw(l.id); reset(); }} style={{
               padding:'12px 14px', borderRadius:12, border: law===l.id ? '2px solid #8b5cf6' : '1.5px solid #e5e7eb',
@@ -123,7 +123,7 @@ export default function GasLawsSimulator() {
         </div>
 
         {/* Inputs */}
-        <div style={{ display:'grid', gridTemplateColumns:'1fr 1fr', gap:14, marginBottom:20 }}>
+        <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fit, minmax(180px, 1fr))', gap:14, marginBottom:20 }}>
           {law === 'ideal' && <>
             <Field label="Pressure (P)" value={P} onChange={setP} unit="bar" hint="Leave blank to solve" />
             <Field label="Volume (V)" value={V} onChange={setV} unit="L" hint="Leave blank to solve" />

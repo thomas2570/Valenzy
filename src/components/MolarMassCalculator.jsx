@@ -87,12 +87,12 @@ export default function MolarMassCalculator() {
       {/* Body */}
       <div style={{ padding:'28px 40px 36px' }}>
         <form onSubmit={e => { e.preventDefault(); calculate(); }}>
-          <div style={{ display:'flex', gap:10, marginBottom:16 }}>
+          <div style={{ display:'flex', flexWrap: 'wrap', gap:10, marginBottom:16 }}>
             <input
               value={formula}
               onChange={e => { setFormula(e.target.value); setResult(null); setError(''); }}
               placeholder="e.g. H2O, C6H12O6, H2SO4"
-              style={{ flex:1, border:'1.5px solid #e5e7eb', borderRadius:12, padding:'12px 16px', fontSize:15, color:'#111827', fontFamily:"'JetBrains Mono',monospace", outline:'none', background:'#fafafa' }}
+              style={{ flex:'1 1 200px', border:'1.5px solid #e5e7eb', borderRadius:12, padding:'12px 16px', fontSize:15, color:'#111827', fontFamily:"'JetBrains Mono',monospace", outline:'none', background:'#fafafa' }}
               onFocus={e => e.target.style.borderColor='#f59e0b'}
               onBlur={e => e.target.style.borderColor='#e5e7eb'}
             />
@@ -128,7 +128,7 @@ export default function MolarMassCalculator() {
               </div>
 
               {/* Breakdown table */}
-              <div style={{ background:'#f9fafb', border:'1px solid #e5e7eb', borderRadius:14, overflow:'hidden' }}>
+              <div style={{ background:'#f9fafb', border:'1px solid #e5e7eb', borderRadius:14, overflow:'hidden', overflowX: 'auto' }}>
                 <table style={{ width:'100%', borderCollapse:'collapse', fontSize:14 }}>
                   <thead>
                     <tr style={{ background:'#f3f4f6' }}>

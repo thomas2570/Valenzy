@@ -20,6 +20,7 @@ export default function VirtualWorkbench() {
   const [activeElement, setActiveElement] = useState(ELEMENTS[0]);
   const [showElementMenu, setShowElementMenu] = useState(false);
   const [reactionActive, setReactionActive] = useState(false); 
+  const [elementDropped, setElementDropped] = useState(false);
   
   // Refs for animation loop
   const stateRef = useRef({
@@ -45,9 +46,10 @@ export default function VirtualWorkbench() {
       heaterIntensity,
       waterLevel,
       activeElement,
-      reactionActive
+      reactionActive,
+      elementDropped
     };
-  }, [temperature, heaterOn, heaterIntensity, waterLevel, activeElement, reactionActive]);
+  }, [temperature, heaterOn, heaterIntensity, waterLevel, activeElement, reactionActive, elementDropped]);
 
   // Heating Logic
   useEffect(() => {
@@ -73,10 +75,11 @@ export default function VirtualWorkbench() {
 
   // Reaction Logic
   useEffect(() => {
-    if (stateRef.current.elementDropped && waterLevel > 0 && !reactionActive) {
-      setTimeout(() => setReactionActive(true), 1000);
+    if (elementDropped && waterLevel > 0 && !reactionActive) {
+      const timer = setTimeout(() => setReactionActive(true), 1000);
+      return () => clearTimeout(timer);
     }
-  }, [waterLevel, stateRef.current.elementDropped, activeElement, reactionActive]);
+  }, [waterLevel, elementDropped, activeElement, reactionActive]);
 
   // Canvas Logic
   useEffect(() => {
@@ -287,6 +290,7 @@ export default function VirtualWorkbench() {
     setTemperature(20);
     setHeaterOn(false);
     setReactionActive(false);
+    setElementDropped(false);
     stateRef.current.elementDropped = false;
     stateRef.current.elementY = 0;
     stateRef.current.bubbles = [];
@@ -294,6 +298,7 @@ export default function VirtualWorkbench() {
   };
 
   const handleDropElement = () => {
+    setElementDropped(true);
     stateRef.current.elementDropped = true;
     stateRef.current.elementY = canvasRef.current.height / 2 - 250; 
   };

@@ -2,7 +2,7 @@ import React from 'react';
 import { useAppContext } from '../context/AppContext';
 import { motion } from 'framer-motion';
 
-// Colors exactly matching reference site zperiod.app
+// Colors exactly matching reference site valenzy.app
 const CATEGORY_COLORS = {
   'alkali metal':          '#f87171', // red
   'alkaline earth metal':  '#fb923c', // orange

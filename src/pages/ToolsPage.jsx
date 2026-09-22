@@ -73,8 +73,8 @@ const TOOLS = [
   {
     path: '/worksheet',
     number: '6',
-    title: 'Worksheet',
-    description: 'Practice chemistry concepts with comprehensive interactive worksheets.',
+    title: 'Worksheet Studio',
+    description: 'Auto-generate printable chemistry worksheets. Balance equations, practice problems.',
     iconBg: 'linear-gradient(135deg, #f3e8ff, #d8b4fe)',
     iconColor: '#9333ea',
     icon: (
@@ -111,8 +111,8 @@ export default function ToolsPage() {
       {/* ── Grid ── */}
       <div style={{
         display: 'grid',
-        gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
-        gap: 20,
+        gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))',
+        gap: 24,
         maxWidth: 1100,
         margin: '0 auto',
         padding: '0 24px',
@@ -162,6 +162,15 @@ export default function ToolsPage() {
                     display: 'flex', alignItems: 'center', justifyContent: 'center',
                     fontSize: 9, fontWeight: 800, color: '#6b7280',
                   }}>{tool.number}</span>
+                  {/* NEW badge top-right */}
+                  {tool.badge && (
+                    <span style={{
+                      position: 'absolute', top: -6, right: -6,
+                      background: '#6366f1', color: '#fff',
+                      fontSize: 9, fontWeight: 800, letterSpacing: '0.06em',
+                      padding: '2px 6px', borderRadius: 999,
+                    }}>{tool.badge}</span>
+                  )}
                 </div>
 
                 {/* Text */}
@@ -185,7 +194,7 @@ export default function ToolsPage() {
           Built and designed by <span style={{ background: 'linear-gradient(135deg, #6366f1 0%, #84cc16 50%, #f59e0b 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', fontWeight: 800 }}>Thomas Ramesh</span>
         </div>
         <div style={{ marginTop: 4 }}>
-          &copy; 2026 Zperiod. All rights reserved.
+          &copy; 2026 Valenzy. All rights reserved.
         </div>
       </footer>
     </div>

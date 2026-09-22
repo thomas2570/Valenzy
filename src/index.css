@@ -40,7 +40,7 @@ html.dark-theme .keep-color {
 * { box-sizing: border-box; margin: 0; padding: 0; }
 
 html, body, #root {
-  height: 100%;
+  min-height: 100%;
   font-family: 'Space Grotesk', 'Inter', sans-serif;
   background-color: var(--bg-primary);
   background-image:
@@ -194,3 +194,36 @@ html, body, #root {
   pointer-events: none;
 }
 .tile-scan:hover::after { top:110%; transition: top 1.2s linear; }
+
+/* % % Worksheet Print Styles % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % */
+@media print {
+    body {
+        background: white !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+    .no-print {
+        display: none !important;
+    }
+    nav, header, footer {
+        display: none !important;
+    }
+    .print-area {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        box-shadow: none !important;
+        border: none !important;
+    }
+    .worksheet-paper {
+        box-shadow: none !important;
+        border: none !important;
+    }
+    .print-only {
+        display: block !important;
+    }
+}
+.print-only {
+    display: none;
+}

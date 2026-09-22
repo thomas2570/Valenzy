@@ -25,7 +25,7 @@ export default function TablePage() {
           <div>
             Built and designed by <span style={{ background: 'linear-gradient(135deg, #6366f1 0%, #84cc16 50%, #f59e0b 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', fontWeight: 800 }}>Thomas Ramesh</span>
           </div>
-          <div style={{ marginTop: 4 }}>&copy; 2026 Zperiod. All rights reserved.</div>
+          <div style={{ marginTop: 4 }}>&copy; 2026 Valenzy. All rights reserved.</div>
         </footer>
       </div>
       <ElementSidebar />
