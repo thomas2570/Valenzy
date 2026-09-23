@@ -15,6 +15,14 @@ import SettingsPage from './pages/SettingsPage';
 import VirtualLabPage from './pages/VirtualLabPage';
 import WorksheetPage from './pages/WorksheetPage';
 import QuizPage from './pages/QuizPage';
+import AboutPage from './pages/AboutPage';
+import TermsPage from './pages/TermsPage';
+import PrivacyPage from './pages/PrivacyPage';
+import CookiePolicyPage from './pages/CookiePolicyPage';
+import ContactPage from './pages/ContactPage';
+import Footer from './components/Footer';
+import ContactModal from './components/ContactModal';
+import DesktopWarningModal from './components/DesktopWarningModal';
 
 export default function App() {
   return (
@@ -37,8 +45,16 @@ export default function App() {
                 <Route path="/virtual-lab" element={<VirtualLabPage />} />
                 <Route path="/worksheet" element={<WorksheetPage />} />
                 <Route path="/quiz" element={<QuizPage />} />
+                <Route path="/about" element={<AboutPage />} />
+                <Route path="/terms" element={<TermsPage />} />
+                <Route path="/privacy" element={<PrivacyPage />} />
+                <Route path="/cookies" element={<CookiePolicyPage />} />
+                <Route path="/contact" element={<ContactPage />} />
               </Routes>
           </main>
+          <Footer />
+          <ContactModal />
+          <DesktopWarningModal />
         </div>
       </BrowserRouter>
     </AppProvider>

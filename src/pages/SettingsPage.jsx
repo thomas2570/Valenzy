@@ -290,13 +290,6 @@ export default function SettingsPage() {
 
       </div>
 
-      {/* Footer Signature */}
-      <footer style={{ marginTop: 80, textAlign: 'center', color: '#64748b', fontSize: 13, fontWeight: 500 }}>
-        <div>
-          Built and designed by <span style={{ background: 'linear-gradient(135deg, #6366f1 0%, #84cc16 50%, #f59e0b 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', fontWeight: 800 }}>Thomas Ramesh</span>
-        </div>
-        <div style={{ marginTop: 4 }}>&copy; 2026 Valenzy. All rights reserved.</div>
-      </footer>
       {/* About Modal */}
       {showAbout && (
         <div 

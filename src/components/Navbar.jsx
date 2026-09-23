@@ -1,12 +1,10 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { NavLink, useNavigate, useLocation } from 'react-router-dom';
 import { useAppContext } from '../context/AppContext';
-import { createPortal } from 'react-dom';
 
 export default function Navbar() {
   const [isDark, setIsDark] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [showDesktopWarning, setShowDesktopWarning] = useState(false);
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const { dispatch } = useAppContext();
   const navigate = useNavigate();
@@ -14,7 +12,12 @@ export default function Navbar() {
   const menuRef = useRef(null);
 
   useEffect(() => {
-    const handleResize = () => setWindowWidth(window.innerWidth);
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+      if (window.innerWidth >= 768) {
+        setIsMobileMenuOpen(false);
+      }
+    };
     window.addEventListener('resize', handleResize);
     if (document.documentElement.classList.contains('dark-theme')) {
       setIsDark(true);
@@ -32,6 +35,27 @@ export default function Navbar() {
     };
   }, []);
 
+  // Lock background scroll when mobile menu is open
+  useEffect(() => {
+    if (isMobileMenuOpen) {
+      const originalBodyOverflow = document.body.style.overflow;
+      const originalHtmlOverflow = document.documentElement.style.overflow;
+
+      document.body.style.overflow = 'hidden';
+      document.documentElement.style.overflow = 'hidden';
+
+      return () => {
+        document.body.style.overflow = originalBodyOverflow;
+        document.documentElement.style.overflow = originalHtmlOverflow;
+      };
+    }
+  }, [isMobileMenuOpen]);
+
+  // Close mobile menu on route change
+  useEffect(() => {
+    setIsMobileMenuOpen(false);
+  }, [location.pathname]);
+
   const toggleDarkMode = () => {
     if (isDark) {
       document.documentElement.classList.remove('dark-theme');
@@ -43,9 +67,10 @@ export default function Navbar() {
 
   const navItems = [
     { to: '/', label: 'Home', end: true },
+    { to: '/about', label: 'About', end: false },
     { to: '/table', label: 'Table', end: false },
-    { to: '/ions', label: 'Ions', end: false },
     { to: '/tools', label: 'Tools', end: false },
+    { to: '/ions', label: 'Ions', end: false },
     { to: '/quiz', label: 'Quiz', end: false, badge: true },
     { to: '/settings', label: 'Settings', end: false },
   ];
@@ -54,7 +79,7 @@ export default function Navbar() {
     if (to === '/table' && windowWidth < 1024) {
       e.preventDefault();
       setIsMobileMenuOpen(false);
-      setShowDesktopWarning(true);
+      dispatch({ type: 'OPEN_DESKTOP_WARNING' });
     } else {
       setIsMobileMenuOpen(false);
     }
@@ -204,15 +229,18 @@ export default function Navbar() {
       {/* ── Mobile Dropdown Overlay (Gohyred Style) ── */}
       {isMobileMenuOpen && (
         <div className="md:hidden animate-fadeIn" style={{
-          position: 'absolute', top: '100%', left: 0, right: 0, width: '100%', height: 'calc(100vh - 60px)',
+          position: 'absolute', top: '100%', left: 0, right: 0, width: '100%',
+          height: 'calc(100dvh - 60px)',
           background: 'rgba(255, 255, 255, 0.98)',
           backdropFilter: 'blur(20px)',
           WebkitBackdropFilter: 'blur(20px)',
           borderTop: '1px solid #f1f5f9',
           zIndex: 40,
-          overflowY: 'auto'
+          overflowY: 'auto',
+          overscrollBehavior: 'contain',
+          WebkitOverflowScrolling: 'touch',
         }}>
-          <div style={{ display: 'flex', flexDirection: 'column', padding: '24px 16px', gap: 8 }}>
+          <div style={{ display: 'flex', flexDirection: 'column', padding: '24px 16px 40px', gap: 8 }}>
             {navItems.map(({ to, label, badge }) => {
               const isActive = location.pathname === to || (to !== '/' && location.pathname.startsWith(to));
               return (
@@ -246,53 +274,6 @@ export default function Navbar() {
             })}
           </div>
         </div>
-      )}
-
-      {/* ── Table Warning Modal ── */}
-      {showDesktopWarning && createPortal(
-        <div style={{
-          position: 'fixed', top: 0, left: 0, width: '100vw', height: '100vh', zIndex: 99999,
-          background: 'rgba(0,0,0,0.5)', backdropFilter: 'blur(10px)',
-          display: 'flex', alignItems: 'center', justifyContent: 'center',
-          padding: 24, animation: 'fadeIn 0.2s'
-        }}>
-          <div style={{
-            background: '#fff', borderRadius: 24, padding: 32,
-            maxWidth: 360, width: '100%', textAlign: 'center',
-            boxShadow: '0 20px 40px rgba(0,0,0,0.2)',
-            position: 'relative'
-          }}>
-            <button onClick={() => setShowDesktopWarning(false)} style={{
-              position: 'absolute', top: 16, right: 16,
-              background: '#f1f5f9', border: 'none', width: 32, height: 32,
-              borderRadius: '50%', cursor: 'pointer', display: 'flex',
-              alignItems: 'center', justifyContent: 'center', color: '#64748b'
-            }}>
-              <svg width="16" height="16" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24"><path d="M6 18L18 6M6 6l12 12"/></svg>
-            </button>
-            <div style={{
-              width: 56, height: 56, borderRadius: 16, background: '#e0e7ff', color: '#4f46e5',
-              display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto 16px'
-            }}>
-              <svg width="28" height="28" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
-                <rect x="2" y="3" width="20" height="14" rx="2" ry="2" />
-                <line x1="8" y1="21" x2="16" y2="21" />
-                <line x1="12" y1="17" x2="12" y2="21" />
-              </svg>
-            </div>
-            <h3 style={{ fontSize: 20, fontWeight: 800, color: '#0f172a', marginBottom: 8 }}>Desktop Required</h3>
-            <p style={{ fontSize: 14, color: '#64748b', lineHeight: 1.5, marginBottom: 24 }}>
-              For the best visual experience and usability, the Interactive Periodic Table should be opened in desktop mode.
-            </p>
-            <button onClick={() => setShowDesktopWarning(false)} style={{
-              width: '100%', padding: '12px', borderRadius: 12, border: 'none',
-              background: '#4f46e5', color: '#fff', fontSize: 15, fontWeight: 600, cursor: 'pointer'
-            }}>
-              Got it
-            </button>
-          </div>
-        </div>,
-        document.body
       )}
     </header>
   );

@@ -187,16 +187,6 @@ export default function ToolsPage() {
           </motion.div>
         ))}
       </div>
-
-      {/* Footer */}
-      <footer style={{ textAlign: 'center', marginTop: 80, fontSize: 13, fontWeight: 500, color: '#64748b', fontFamily: "'Inter', sans-serif" }}>
-        <div>
-          Built and designed by <span style={{ background: 'linear-gradient(135deg, #6366f1 0%, #84cc16 50%, #f59e0b 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', fontWeight: 800 }}>Thomas Ramesh</span>
-        </div>
-        <div style={{ marginTop: 4 }}>
-          &copy; 2026 Valenzy. All rights reserved.
-        </div>
-      </footer>
     </div>
   );
 }

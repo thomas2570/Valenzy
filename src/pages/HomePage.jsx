@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
-import { createPortal } from 'react-dom';
+import { useAppContext } from '../context/AppContext';
 
 const FEATURES = [
   {
@@ -61,8 +61,8 @@ const FEATURES = [
 
 export default function HomePage() {
   const navigate = useNavigate();
+  const { dispatch } = useAppContext();
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
-  const [showDesktopWarning, setShowDesktopWarning] = useState(false);
 
   useEffect(() => {
     const handleResize = () => setWindowWidth(window.innerWidth);
@@ -74,7 +74,7 @@ export default function HomePage() {
 
   const handleNavigation = (to) => {
     if (to === '/table' && isMobile) {
-      setShowDesktopWarning(true);
+      dispatch({ type: 'OPEN_DESKTOP_WARNING' });
     } else {
       navigate(to);
     }
@@ -234,62 +234,6 @@ export default function HomePage() {
         </motion.div>
 
       </div>
-
-      {/* ── Table Warning Modal ── */}
-      <AnimatePresence>
-        {showDesktopWarning && createPortal(
-          <motion.div 
-            initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}
-            style={{
-              position: 'fixed', top: 0, left: 0, width: '100vw', height: '100vh', zIndex: 99999,
-              background: 'rgba(0,0,0,0.5)', backdropFilter: 'blur(10px)',
-              display: 'flex', alignItems: 'center', justifyContent: 'center',
-              padding: 24
-            }}
-          >
-            <motion.div 
-              initial={{ scale: 0.9, y: 20 }} animate={{ scale: 1, y: 0 }} exit={{ scale: 0.9, y: 20 }}
-              style={{
-                background: '#fff', borderRadius: 24, padding: 32,
-                maxWidth: 360, width: '100%', textAlign: 'center',
-                boxShadow: '0 20px 40px rgba(0,0,0,0.2)',
-                position: 'relative'
-              }}
-            >
-              <button onClick={() => setShowDesktopWarning(false)} style={{
-                position: 'absolute', top: 16, right: 16,
-                background: '#f1f5f9', border: 'none', width: 32, height: 32,
-                borderRadius: '50%', cursor: 'pointer', display: 'flex',
-                alignItems: 'center', justifyContent: 'center', color: '#64748b'
-              }}>
-                <svg width="16" height="16" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24"><path d="M6 18L18 6M6 6l12 12"/></svg>
-              </button>
-              <div style={{
-                width: 56, height: 56, borderRadius: 16, background: '#e0e7ff', color: '#4f46e5',
-                display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto 16px'
-              }}>
-                <svg width="28" height="28" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
-                  <rect x="2" y="3" width="20" height="14" rx="2" ry="2" />
-                  <line x1="8" y1="21" x2="16" y2="21" />
-                  <line x1="12" y1="17" x2="12" y2="21" />
-                </svg>
-              </div>
-              <h3 style={{ fontSize: 20, fontWeight: 800, color: '#0f172a', marginBottom: 8 }}>Desktop Required</h3>
-              <p style={{ fontSize: 14, color: '#64748b', lineHeight: 1.5, marginBottom: 24 }}>
-                For the best visual experience and usability, the Interactive Periodic Table should be opened in desktop mode.
-              </p>
-              <button onClick={() => setShowDesktopWarning(false)} style={{
-                width: '100%', padding: '12px', borderRadius: 12, border: 'none',
-                background: '#4f46e5', color: '#fff', fontSize: 15, fontWeight: 600, cursor: 'pointer',
-                transition: 'background 0.2s'
-              }}>
-                Got it
-              </button>
-            </motion.div>
-          </motion.div>,
-          document.body
-        )}
-      </AnimatePresence>
     </div>
   );
 }
