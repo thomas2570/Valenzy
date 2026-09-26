@@ -1,0 +1,42 @@
+{
+  "H": [
+    "Hydrogen is the most abundant element in the universe, making up about 75% of all normal matter.",
+    "It is the only element that can exist without neutrons."
+  ],
+  "He": [
+    "Helium is the second most abundant element, yet it is so light that Earth's gravity cannot hold it, and it escapes into space.",
+    "It becomes a superfluid near absolute zero, defying gravity and creeping up the sides of containers."
+  ],
+  "Li": [
+    "Lithium is the lightest metal and can float on water.",
+    "It is widely used in rechargeable batteries for smartphones and electric vehicles."
+  ],
+  "Be": [
+    "Beryllium is incredibly stiff and lightweight, making it ideal for aerospace applications.",
+    "It is highly toxic to humans if its dust is inhaled."
+  ],
+  "B": [
+    "Boron is crucial for plant growth but can be toxic in large amounts.",
+    "It is used in flares and fireworks to produce a vibrant green color."
+  ],
+  "C": [
+    "Carbon is the foundation of all known life on Earth.",
+    "It can exist as both the softest mineral (graphite) and one of the hardest (diamond)."
+  ],
+  "N": [
+    "Nitrogen makes up about 78% of Earth's atmosphere.",
+    "Liquid nitrogen is used for freezing and transporting food, and for cryopreservation."
+  ],
+  "O": [
+    "Oxygen is highly reactive and forms compounds with almost all other elements.",
+    "Liquid oxygen is pale blue and highly paramagnetic, meaning it can be attracted by a magnet."
+  ],
+  "F": [
+    "Fluorine is the most electronegative and reactive of all elements.",
+    "It is added to public water supplies and toothpaste to prevent tooth decay."
+  ],
+  "Ne": [
+    "Neon glows reddish-orange in a vacuum discharge tube, giving us the classic neon sign.",
+    "It is completely inert and has no known stable chemical compounds."
+  ]
+}

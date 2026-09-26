@@ -87,6 +87,25 @@ const TOOLS = [
       </svg>
     ),
   },
+  {
+    path: '/molecule-builder',
+    number: '7',
+    badge: 'NEW',
+    title: 'Molecule Builder',
+    description: 'Build molecules atom-by-atom. Real-time 3D VSEPR geometry, bond angles, and polarity.',
+    iconBg: 'linear-gradient(135deg, #ede9fe, #c4b5fd)',
+    iconColor: '#6d28d9',
+    icon: (
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.8} strokeLinecap="round" strokeLinejoin="round">
+        <circle cx="8" cy="8" r="3" />
+        <circle cx="16" cy="8" r="3" />
+        <circle cx="12" cy="17" r="3" />
+        <line x1="10.5" y1="9.5" x2="13.5" y2="9.5" />
+        <line x1="9" y1="10.5" x2="11" y2="14.8" />
+        <line x1="15" y1="10.5" x2="13" y2="14.8" />
+      </svg>
+    ),
+  },
 ];
 
 export default function ToolsPage() {
@@ -123,6 +142,7 @@ export default function ToolsPage() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: i * 0.08, duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
+            style={{ height: '100%' }}
           >
             <NavLink to={tool.path} style={{ textDecoration: 'none', display: 'block', height: '100%' }}>
               <motion.div
@@ -137,10 +157,12 @@ export default function ToolsPage() {
                   cursor: 'pointer',
                   position: 'relative',
                   overflow: 'hidden',
+                  height: '100%',
                   minHeight: 200,
                   display: 'flex',
                   flexDirection: 'column',
                   gap: 16,
+                  boxSizing: 'border-box',
                 }}
               >
                 {/* Icon with number badge */}

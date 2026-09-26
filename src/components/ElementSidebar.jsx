@@ -2,12 +2,16 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useAppContext } from '../context/AppContext';
 import AtomicModel3D from './AtomicModel3D';
+import realWorldFacts from '../data/realWorldFacts.json';
+import elementHistory from '../data/elementHistory.json';
+import { Volume2, VolumeX } from 'lucide-react';
 
 const THEMES = [
   '#b3c1d0', // Slide 1 (Blue-grey)
   '#9fbed1', // Slide 2 (Light blue)
   '#a3d0c3', // Slide 3 (Mint green)
   '#d2bd98', // Slide 4 (Beige)
+  '#c4b5fd', // Slide 5 (Purple)
 ];
 
 const RowItem = ({ label, value, boldValue = true }) => (
@@ -25,11 +29,57 @@ const InnerCard = ({ title, children, isGreen, isRed, isBeige }) => {
   
   return (
     <div style={{ background: bg, borderRadius: 16, padding: '16px', marginBottom: 12, border: '1px solid rgba(255,255,255,0.2)' }}>
-      {title && <div style={{ fontSize: 9, fontWeight: 800, letterSpacing: '0.15em', color: isRed ? '#b91c1c' : (isGreen ? '#047857' : 'rgba(0,0,0,0.4)'), textTransform: 'uppercase', marginBottom: 8 }}>{title}</div>}
+      {title && <div style={{ fontSize: 9, fontWeight: 800, letterSpacing: '0.15em', color: isRed ? '#b91c1c' : (isGreen ? '#047857' : 'rgba(0,0,0,0.4)'), textTransform: 'uppercase', marginBottom: 8, display: 'flex', justifyContent: 'space-between' }}>
+        <span>{title}</span>
+      </div>}
       <div style={{ fontSize: 13, fontWeight: 700, color: isRed ? '#b91c1c' : (isGreen ? '#047857' : 'rgba(0,0,0,0.8)') }}>
         {children}
       </div>
     </div>
+  );
+};
+
+const TTSButton = ({ text }) => {
+  const [isPlaying, setIsPlaying] = useState(false);
+
+  const toggleSpeech = (e) => {
+    e.stopPropagation();
+    if (!window.speechSynthesis) return;
+
+    if (isPlaying) {
+      window.speechSynthesis.cancel();
+      setIsPlaying(false);
+    } else {
+      window.speechSynthesis.cancel(); // clear queue
+      const utterance = new SpeechSynthesisUtterance(text);
+      utterance.onend = () => setIsPlaying(false);
+      setIsPlaying(true);
+      window.speechSynthesis.speak(utterance);
+    }
+  };
+
+  React.useEffect(() => {
+    return () => {
+      if (window.speechSynthesis) {
+        window.speechSynthesis.cancel();
+      }
+    };
+  }, []);
+
+  return (
+    <button 
+      onClick={toggleSpeech}
+      title="Listen"
+      style={{ 
+        background: 'none', border: 'none', cursor: 'pointer', 
+        padding: 4, display: 'flex', alignItems: 'center', justifyContent: 'center',
+        color: isPlaying ? '#6366f1' : 'rgba(0,0,0,0.4)',
+        transition: 'color 0.2s',
+        marginLeft: 8
+      }}
+    >
+      {isPlaying ? <VolumeX size={14} /> : <Volume2 size={14} />}
+    </button>
   );
 };
 
@@ -50,8 +100,9 @@ export default function ElementSidebar() {
 
   if (!el) return null;
 
-  const nextSlide = () => setTab(t => (t + 1) % 4);
-  const prevSlide = () => setTab(t => (t === 0 ? 3 : t - 1));
+  const numTabs = 5;
+  const nextSlide = () => setTab(t => (t + 1) % numTabs);
+  const prevSlide = () => setTab(t => (t === 0 ? numTabs - 1 : t - 1));
 
   const bgTheme = THEMES[tab];
   const protons = el.number;
@@ -102,8 +153,9 @@ export default function ElementSidebar() {
             <div style={{ fontSize: isSmallMobile ? 40 : 56, fontWeight: 900, lineHeight: 1, letterSpacing: '-0.03em', color: '#111827' }}>
               {el.symbol}
             </div>
-            <div style={{ fontSize: isSmallMobile ? 16 : 20, fontWeight: 800, color: '#111827', marginLeft: 'auto' }}>
+            <div style={{ fontSize: isSmallMobile ? 16 : 20, fontWeight: 800, color: '#111827', marginLeft: 'auto', display: 'flex', alignItems: 'center' }}>
               {el.name}
+              {el.summary && <TTSButton text={el.summary} />}
             </div>
           </div>          {/* Content Area based on Tab */}
           <div style={{ padding: '24px 32px', flex: 1, display: 'flex', flexDirection: 'column', position: 'relative' }}>
@@ -213,12 +265,69 @@ export default function ElementSidebar() {
                   </InnerCard>
                 </motion.div>
               )}
+
+              {tab === 4 && (
+                <motion.div key="t4" initial={{ opacity: 0, x: 15 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: -15 }} transition={{ duration: 0.2 }} style={{ flex: 1, display: 'flex', flexDirection: 'column' }}>
+                  
+                  <div style={{ display: 'flex', alignItems: 'center', marginBottom: 12 }}>
+                    <div style={{ fontSize: 11, fontWeight: 800, letterSpacing: '0.15em', textTransform: 'uppercase', color: 'rgba(0,0,0,0.6)' }}>
+                      Did You Know?
+                    </div>
+                    {realWorldFacts[el.symbol] && (
+                      <TTSButton text={realWorldFacts[el.symbol].join(' ')} />
+                    )}
+                  </div>
+                  
+                  <div style={{ background: 'rgba(255,255,255,0.4)', borderRadius: 16, padding: '16px', marginBottom: 16, border: '1px solid rgba(255,255,255,0.2)' }}>
+                    <ul style={{ margin: 0, paddingLeft: 20, fontSize: 13, fontWeight: 600, color: 'rgba(0,0,0,0.8)', lineHeight: 1.6 }}>
+                      {realWorldFacts[el.symbol] ? (
+                        realWorldFacts[el.symbol].map((fact, i) => (
+                          <li key={i} style={{ marginBottom: 8 }}>{fact}</li>
+                        ))
+                      ) : (
+                        <li>No facts available for this element yet.</li>
+                      )}
+                    </ul>
+                  </div>
+
+                  <div style={{ display: 'flex', alignItems: 'center', marginBottom: 12 }}>
+                    <div style={{ fontSize: 11, fontWeight: 800, letterSpacing: '0.15em', textTransform: 'uppercase', color: 'rgba(0,0,0,0.6)' }}>
+                      Discovery Timeline
+                    </div>
+                    {elementHistory[el.symbol] && (
+                      <TTSButton text={`Discovered in ${elementHistory[el.symbol].year} by ${elementHistory[el.symbol].discoverer}. ${elementHistory[el.symbol].story}`} />
+                    )}
+                  </div>
+
+                  <div style={{ background: 'rgba(255,255,255,0.4)', borderRadius: 16, padding: '16px', border: '1px solid rgba(255,255,255,0.2)', flex: 1 }}>
+                    {elementHistory[el.symbol] ? (
+                      <div>
+                        <div style={{ marginBottom: 12 }}>
+                          <span style={{ fontSize: 14, fontWeight: 800, color: '#4f46e5', background: '#e0e7ff', padding: '2px 8px', borderRadius: 8 }}>
+                            {elementHistory[el.symbol].year}
+                          </span>
+                        </div>
+                        <div style={{ fontSize: 13, fontWeight: 700, color: 'rgba(0,0,0,0.6)', marginBottom: 8 }}>
+                          By {elementHistory[el.symbol].discoverer}
+                        </div>
+                        <div style={{ fontSize: 13, fontWeight: 600, color: 'rgba(0,0,0,0.8)', lineHeight: 1.6 }}>
+                          {elementHistory[el.symbol].story}
+                        </div>
+                      </div>
+                    ) : (
+                      <div style={{ fontSize: 13, fontWeight: 600, color: 'rgba(0,0,0,0.8)' }}>
+                        Detailed history not available yet.
+                      </div>
+                    )}
+                  </div>
+                </motion.div>
+              )}
               </AnimatePresence>
             </div>
             
             {/* Pagination / Dots */}
             <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', gap: 6, marginTop: 24 }}>
-              {[0, 1, 2, 3].map(i => (
+              {[0, 1, 2, 3, 4].map(i => (
                 <div 
                   key={i} 
                   onClick={() => setTab(i)}

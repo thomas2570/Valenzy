@@ -1,12 +1,14 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { NavLink, useNavigate, useLocation } from 'react-router-dom';
-import { useAppContext } from '../context/AppContext';
+import { useAppContext, useTranslation } from '../context/AppContext';
 
 export default function Navbar() {
   const [isDark, setIsDark] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
-  const { dispatch } = useAppContext();
+  const { dispatch, state } = useAppContext();
+  const user = state.user;
+  const t = useTranslation();
   const navigate = useNavigate();
   const location = useLocation();
   const menuRef = useRef(null);
@@ -66,13 +68,14 @@ export default function Navbar() {
   };
 
   const navItems = [
-    { to: '/', label: 'Home', end: true },
-    { to: '/about', label: 'About', end: false },
-    { to: '/table', label: 'Table', end: false },
-    { to: '/tools', label: 'Tools', end: false },
-    { to: '/ions', label: 'Ions', end: false },
-    { to: '/quiz', label: 'Quiz', end: false, badge: true },
-    { to: '/settings', label: 'Settings', end: false },
+    { to: '/', label: t('nav_home'), end: true },
+    { to: '/about', label: t('nav_about'), end: false },
+    { to: '/table', label: t('nav_table'), end: false },
+    { to: '/tools', label: t('nav_tools'), end: false },
+    { to: '/ions', label: t('nav_ions'), end: false },
+    { to: '/quiz', label: t('nav_quiz'), end: false, badge: true },
+    // Only show Account/Settings once auth state is known
+    ...(user !== undefined ? [{ to: user ? '/progress' : '/settings', label: user ? 'Account' : t('nav_settings'), end: false }] : []),
   ];
 
   const handleNavClick = (e, to) => {

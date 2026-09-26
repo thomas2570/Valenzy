@@ -1,6 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import { useAppContext } from '../context/AppContext';
+import { useAppContext, useTranslation } from '../context/AppContext';
 import { 
   Atom, 
   FlaskConical, 
@@ -14,11 +14,13 @@ import {
   ShieldCheck,
   Scale,
   Cookie,
-  Info
+  Info,
+  User
 } from 'lucide-react';
 
 export default function Footer() {
   const { dispatch } = useAppContext();
+  const t = useTranslation();
 
   const navLinkStyle = {
     color: '#64748b',
@@ -183,7 +185,7 @@ export default function Footer() {
               gap: 8
             }}>
               <Atom size={16} color="#6366f1" />
-              <span>Explore Elements</span>
+              <span>{t('footer_explore')}</span>
             </h4>
             <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: 12 }}>
               <li>
@@ -275,7 +277,7 @@ export default function Footer() {
               gap: 8
             }}>
               <FlaskConical size={16} color="#10b981" />
-              <span>Practice & Lab</span>
+              <span>{t('footer_practice')}</span>
             </h4>
             <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: 12 }}>
               <li>
@@ -313,6 +315,50 @@ export default function Footer() {
               </li>
               <li>
                 <NavLink 
+                  to="/leaderboard" 
+                  style={navLinkStyle}
+                  onMouseEnter={e => { e.currentTarget.style.color = '#10b981'; e.currentTarget.style.transform = 'translateX(4px)'; }}
+                  onMouseLeave={e => { e.currentTarget.style.color = '#64748b'; e.currentTarget.style.transform = 'translateX(0)'; }}
+                >
+                  <ChevronRight size={14} style={{ opacity: 0.5 }} />
+                  <span>Leaderboard</span>
+                </NavLink>
+              </li>
+              <li>
+                <NavLink 
+                  to="/gallery" 
+                  style={navLinkStyle}
+                  onMouseEnter={e => { e.currentTarget.style.color = '#10b981'; e.currentTarget.style.transform = 'translateX(4px)'; }}
+                  onMouseLeave={e => { e.currentTarget.style.color = '#64748b'; e.currentTarget.style.transform = 'translateX(0)'; }}
+                >
+                  <ChevronRight size={14} style={{ opacity: 0.5 }} />
+                  <span>Molecule Gallery</span>
+                </NavLink>
+              </li>
+              <li>
+                <NavLink 
+                  to="/mnemonics" 
+                  style={navLinkStyle}
+                  onMouseEnter={e => { e.currentTarget.style.color = '#10b981'; e.currentTarget.style.transform = 'translateX(4px)'; }}
+                  onMouseLeave={e => { e.currentTarget.style.color = '#64748b'; e.currentTarget.style.transform = 'translateX(0)'; }}
+                >
+                  <ChevronRight size={14} style={{ opacity: 0.5 }} />
+                  <span>Mnemonic Generator</span>
+                </NavLink>
+              </li>
+              <li>
+                <NavLink 
+                  to="/formulas" 
+                  style={navLinkStyle}
+                  onMouseEnter={e => { e.currentTarget.style.color = '#10b981'; e.currentTarget.style.transform = 'translateX(4px)'; }}
+                  onMouseLeave={e => { e.currentTarget.style.color = '#64748b'; e.currentTarget.style.transform = 'translateX(0)'; }}
+                >
+                  <ChevronRight size={14} style={{ opacity: 0.5 }} />
+                  <span>Formula Sheet Generator</span>
+                </NavLink>
+              </li>
+              <li>
+                <NavLink 
                   to="/tools" 
                   style={navLinkStyle}
                   onMouseEnter={e => { e.currentTarget.style.color = '#10b981'; e.currentTarget.style.transform = 'translateX(4px)'; }}
@@ -339,7 +385,7 @@ export default function Footer() {
               gap: 8
             }}>
               <ShieldCheck size={16} color="#f59e0b" />
-              <span>Platform & Legal</span>
+              <span>{t('footer_legal')}</span>
             </h4>
             <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: 12 }}>
               <li>
@@ -416,6 +462,8 @@ export default function Footer() {
               </li>
             </ul>
           </div>
+
+
         </div>
 
         {/* Bottom Bar */}

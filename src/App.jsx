@@ -20,6 +20,13 @@ import TermsPage from './pages/TermsPage';
 import PrivacyPage from './pages/PrivacyPage';
 import CookiePolicyPage from './pages/CookiePolicyPage';
 import ContactPage from './pages/ContactPage';
+import MoleculeBuilderPage from './pages/MoleculeBuilderPage';
+import AuthPage from './pages/AuthPage';
+import ProgressPage from './pages/ProgressPage';
+import FormulaSheetPage from './pages/FormulaSheetPage';
+import MnemonicPage from './pages/MnemonicPage';
+import LeaderboardPage from './pages/LeaderboardPage';
+import MoleculeGalleryPage from './pages/MoleculeGalleryPage';
 import Footer from './components/Footer';
 import ContactModal from './components/ContactModal';
 import DesktopWarningModal from './components/DesktopWarningModal';
@@ -50,6 +57,14 @@ export default function App() {
                 <Route path="/privacy" element={<PrivacyPage />} />
                 <Route path="/cookies" element={<CookiePolicyPage />} />
                 <Route path="/contact" element={<ContactPage />} />
+                <Route path="/molecule-builder" element={<MoleculeBuilderPage />} />
+                <Route path="/login" element={<AuthPage />} />
+                <Route path="/signup" element={<AuthPage />} />
+                <Route path="/progress" element={<ProgressPage />} />
+                <Route path="/formulas" element={<FormulaSheetPage />} />
+                <Route path="/mnemonics" element={<MnemonicPage />} />
+                <Route path="/leaderboard" element={<LeaderboardPage />} />
+                <Route path="/gallery" element={<MoleculeGalleryPage />} />
               </Routes>
           </main>
           <Footer />

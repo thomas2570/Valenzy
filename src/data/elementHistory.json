@@ -1,0 +1,52 @@
+{
+  "H": {
+    "discoverer": "Henry Cavendish",
+    "year": "1766",
+    "story": "Cavendish recognized hydrogen as a distinct substance when he produced 'flammable air' by reacting zinc with acid. He later discovered that burning it produces water."
+  },
+  "He": {
+    "discoverer": "Pierre Janssen and Norman Lockyer",
+    "year": "1868",
+    "story": "Helium was discovered independently by Janssen and Lockyer while observing a solar eclipse. They noticed a yellow spectral line in the sunlight that did not match any known element."
+  },
+  "Li": {
+    "discoverer": "Johan August Arfwedson",
+    "year": "1817",
+    "story": "Arfwedson discovered lithium in the mineral petalite. Unlike sodium and potassium, he found that its compounds were mostly insoluble in water."
+  },
+  "Be": {
+    "discoverer": "Louis-Nicolas Vauquelin",
+    "year": "1798",
+    "story": "Vauquelin discovered beryllium in the gemstone beryl. It was originally called 'glucinium' due to the sweet taste of its salts, though tasting it is now known to be deadly."
+  },
+  "B": {
+    "discoverer": "Joseph-Louis Gay-Lussac and Louis-Jacques Thénard",
+    "year": "1808",
+    "story": "Boron was isolated simultaneously by French chemists Gay-Lussac and Thénard, and by English chemist Sir Humphry Davy, by reacting boric acid with potassium."
+  },
+  "C": {
+    "discoverer": "Known since antiquity",
+    "year": "Ancient",
+    "story": "Carbon has been known since ancient times in the form of soot, charcoal, and graphite. Its name comes from the Latin 'carbo', meaning coal."
+  },
+  "N": {
+    "discoverer": "Daniel Rutherford",
+    "year": "1772",
+    "story": "Rutherford discovered nitrogen by removing oxygen and carbon dioxide from air and finding a residual gas that could not support combustion or life."
+  },
+  "O": {
+    "discoverer": "Carl Wilhelm Scheele and Joseph Priestley",
+    "year": "1774",
+    "story": "Priestley is usually credited with oxygen's discovery after he heated mercuric oxide and captured the gas, though Scheele had discovered it a few years earlier but published later."
+  },
+  "F": {
+    "discoverer": "Henri Moissan",
+    "year": "1886",
+    "story": "Fluorine is so reactive that isolating it eluded chemists for decades. Moissan finally succeeded by electrolyzing a solution of potassium hydrogen fluoride in liquid hydrogen fluoride."
+  },
+  "Ne": {
+    "discoverer": "Sir William Ramsay and Morris Travers",
+    "year": "1898",
+    "story": "Ramsay and Travers discovered neon by chilling a sample of air until it became a liquid, then warming the liquid and capturing the gases as they boiled off."
+  }
+}

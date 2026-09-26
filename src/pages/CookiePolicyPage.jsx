@@ -21,7 +21,7 @@ export default function CookiePolicyPage() {
   const COOKIE_TYPES = [
     {
       title: 'Essential Cookies',
-      desc: 'Necessary for the Site to function properly, such as remembering your session, theme, or display preferences. These cannot be disabled without affecting core functionality.',
+      desc: 'Necessary for the Site to function properly, such as maintaining your login session, securing your account, and saving core display preferences. These cannot be disabled without affecting core functionality.',
       badge: 'Required',
       badgeColor: '#dc2626',
       badgeBg: '#fef2f2',
@@ -37,7 +37,7 @@ export default function CookiePolicyPage() {
     },
     {
       title: 'Functionality Cookies',
-      desc: 'Remember choices you make (such as language, calculator defaults, or display settings) to provide a more personalized, fluid learning experience.',
+      desc: 'Remember choices you make (such as language, calculator defaults, 3D viewer settings, or session progress) to provide a more personalized, fluid learning experience.',
       badge: 'Preferences',
       badgeColor: '#16a34a',
       badgeBg: '#f0fdf4',

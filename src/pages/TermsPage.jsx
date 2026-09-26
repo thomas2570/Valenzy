@@ -25,7 +25,7 @@ export default function TermsPage() {
     {
       num: 2,
       title: 'Intellectual Property',
-      content: 'All content on this Site, including but not limited to text, graphics, logos, interactive tools, 3D models, worksheets, and software, is the property of Valenzy or its licensors and is protected by copyright and intellectual property laws. You may not reproduce, distribute, modify, or create derivative works from any content on this Site without our prior written consent, except for personal, non-commercial educational use.'
+      content: 'All content on this Site, including but not limited to text, graphics, logos, interactive tools, 3D models (including the Molecule Builder and Virtual Lab), worksheets, leaderboards, and software, is the property of Valenzy or its licensors and is protected by copyright and intellectual property laws. You may not reproduce, distribute, modify, or create derivative works from any content on this Site without our prior written consent, except for personal, non-commercial educational use.'
     },
     {
       num: 3,
@@ -34,13 +34,13 @@ export default function TermsPage() {
     },
     {
       num: 4,
-      title: 'Accuracy of Content',
-      content: 'While we strive to ensure that the chemistry data, calculations, and educational content on Valenzy are accurate and up to date, we make no warranties or guarantees regarding the completeness, reliability, or accuracy of any information on the Site. Users should independently verify critical information before relying on it for academic or professional purposes.'
+      title: 'Accuracy of Content & Tools',
+      content: 'While we strive to ensure that the chemistry data, calculations (including molar mass, equation balancing, and gas laws), and educational content on Valenzy are accurate and up to date, we make no warranties or guarantees regarding the completeness, reliability, or accuracy of any information on the Site. Users should independently verify critical information before relying on it for academic, laboratory, or professional purposes.'
     },
     {
       num: 5,
       title: 'Limitation of Liability',
-      content: 'Valenzy shall not be liable for any direct, indirect, incidental, or consequential damages arising from your use of, or inability to use, the Site, including but not limited to errors, omissions, interruptions, or delays.'
+      content: 'Valenzy shall not be liable for any direct, indirect, incidental, or consequential damages arising from your use of, or inability to use, the Site, including but not limited to errors, omissions, interruptions, delays, or inaccuracies in calculation tools.'
     },
     {
       num: 6,

@@ -1,7 +1,10 @@
 import React, { useState, useEffect, useRef, useCallback } from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useSearchParams } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { TOPICS, DIFFICULTIES, getQuestions, getTopicStats } from '../data/quizData';
+import { useAppContext } from '../context/AppContext';
+import { db } from '../lib/firebase';
+import { collection, addDoc, doc, updateDoc, increment, setDoc, getDoc } from 'firebase/firestore';
 
 import { markQuestionsAsSeen } from '../utils/questionTracker';
 
@@ -44,6 +47,7 @@ function calcScore(questions, answers) {
 // MAIN PAGE
 // ─────────────────────────────────────────────────────────────────────────────
 export default function QuizPage() {
+  const { state: { user } } = useAppContext();
   const [screen, setScreen]     = useState(SCREEN.SETUP);
   const [questions, setQuestions] = useState([]);
   const [answers, setAnswers]   = useState({}); // questionIndex → optionIndex
@@ -53,10 +57,14 @@ export default function QuizPage() {
   const [showExplain, setShowExplain] = useState(false);
   const [isRevisionRound, setIsRevisionRound] = useState(false);
 
+  const [searchParams] = useSearchParams();
+  const challengeScore = searchParams.get('challengeScore');
+  const challengerName = searchParams.get('challenger');
+
   // Setup config
-  const [topic, setTopic]       = useState('all');
-  const [difficulty, setDifficulty] = useState('All');
-  const [count, setCount]       = useState(10);
+  const [topic, setTopic]       = useState(searchParams.get('topic') || 'all');
+  const [difficulty, setDifficulty] = useState(searchParams.get('difficulty') || 'All');
+  const [count, setCount]       = useState(parseInt(searchParams.get('count')) || 10);
   const [timerOn, setTimerOn]   = useState(true);
   
   // Async Data
@@ -73,6 +81,55 @@ export default function QuizPage() {
 
   const timerRef = useRef(null);
 
+  const handleSubmit = useCallback(async () => {
+    clearInterval(timerRef.current);
+    
+    // Track seen questions when quiz finishes
+    if (questions.length > 0) {
+      const shownIds = questions.map(q => q.id);
+      markQuestionsAsSeen(topic, shownIds);
+    }
+
+    const finalStats = calcScore(questions, answers);
+    
+    if (user) {
+      try {
+        addDoc(collection(db, 'quiz_scores'), {
+          user_id: user.uid,
+          topic: TOPICS.find(t => t.id === topic)?.label || topic,
+          score: finalStats.score,
+          total_questions: finalStats.total,
+          correct: finalStats.correct,
+          wrong: finalStats.wrong,
+          skipped: finalStats.skipped,
+          created_at: new Date().toISOString()
+        }).catch(error => console.error('Failed to save score', error));
+
+        // Update leaderboard stats in the user's profile
+        const userRef = doc(db, 'users', user.uid);
+        getDoc(userRef).then((docSnap) => {
+          if (docSnap.exists()) {
+            updateDoc(userRef, {
+              total_score: increment(finalStats.score),
+              quizzes_taken: increment(1)
+            });
+          } else {
+            setDoc(userRef, {
+              email: user.email,
+              total_score: finalStats.score,
+              quizzes_taken: 1
+            }, { merge: true });
+          }
+        });
+
+      } catch (error) {
+        console.error('Failed to save score', error);
+      }
+    }
+    
+    setScreen(SCREEN.RESULT);
+  }, [questions, topic, answers, user]);
+
   // Start timer
   const startTimer = useCallback((secs) => {
     setTimeLeft(secs);
@@ -83,7 +140,7 @@ export default function QuizPage() {
         return prev - 1;
       });
     }, 1000);
-  }, []); // eslint-disable-line
+  }, [handleSubmit]); // eslint-disable-line
 
   useEffect(() => () => clearInterval(timerRef.current), []);
 
@@ -106,18 +163,6 @@ export default function QuizPage() {
     setScreen(SCREEN.QUIZ);
     if (timerOn) startTimer((DEFAULT_TIME[count] || 10) * 60);
   };
-
-  const handleSubmit = useCallback(() => {
-    clearInterval(timerRef.current);
-    
-    // Track seen questions when quiz finishes
-    if (questions.length > 0) {
-      const shownIds = questions.map(q => q.id);
-      markQuestionsAsSeen(topic, shownIds);
-    }
-    
-    setScreen(SCREEN.RESULT);
-  }, [questions, topic]);
 
   const handleAnswer = (optIdx) => {
     setAnswers(prev => ({ ...prev, [current]: optIdx }));
@@ -175,6 +220,17 @@ export default function QuizPage() {
               </div>
 
               <div style={{ background: C.white, borderRadius: 24, border: `1px solid ${C.border}`, boxShadow: '0 8px 40px rgba(0,0,0,0.07)', padding: '36px 40px' }}>
+
+                {challengeScore && (
+                  <div style={{ background: C.indigoLight, border: `1px solid #c7d2fe`, padding: 16, borderRadius: 16, marginBottom: 24, textAlign: 'center' }}>
+                    <div style={{ fontSize: 13, fontWeight: 800, color: C.indigo, textTransform: 'uppercase', letterSpacing: '0.1em', marginBottom: 4 }}>
+                      Friendly Challenge!
+                    </div>
+                    <div style={{ fontSize: 15, fontWeight: 600, color: C.indigoDark }}>
+                      {challengerName || 'A friend'} challenged you to beat their score of <span style={{ fontSize: 18, fontWeight: 900 }}>{challengeScore}</span>!
+                    </div>
+                  </div>
+                )}
 
                 {/* Topic */}
                 <ConfigSection label={`Topic / Chapter · ${topicStats ? totalQuestions : '...'} questions total`}>
@@ -573,6 +629,20 @@ export default function QuizPage() {
                     fontSize: 14, fontWeight: 700, color: C.white, cursor: 'pointer',
                   }}
                 >↺ Retry Same Config</button>
+                {user && (
+                  <button
+                    onClick={() => {
+                      const shareUrl = `${window.location.origin}/quiz?topic=${topic}&difficulty=${difficulty}&count=${count}&challengeScore=${stats.score}&challenger=${encodeURIComponent(user.email?.split('@')[0] || 'Friend')}`;
+                      navigator.clipboard.writeText(shareUrl);
+                      alert('Challenge link copied to clipboard! Share it with your friend.');
+                    }}
+                    style={{
+                      flex: 1, padding: '13px 0', borderRadius: 14,
+                      border: 'none', background: '#8b5cf6',
+                      fontSize: 14, fontWeight: 700, color: C.white, cursor: 'pointer',
+                    }}
+                  >⚔️ Challenge a Friend</button>
+                )}
               </div>
 
               {/* Question Review Table */}

@@ -30,7 +30,7 @@ export default function PrivacyPage() {
       title: 'Information We Collect',
       body: (
         <p>
-          We may collect personal information such as your name and email address when you voluntarily provide it &mdash; for example, by contacting us, subscribing to updates, or creating an account. We may also automatically collect non-personal information such as browser type, device information, pages visited, and time spent on the Site through standard analytics tools.
+          We may collect personal information such as your name, email address, and profile details when you voluntarily provide it &mdash; for example, by creating an account, saving progress, participating in quizzes, joining the public leaderboard, or contacting us. We may also automatically collect non-personal information such as browser type, device information, pages visited, and time spent on the Site through standard analytics tools.
         </p>
       )
     },
@@ -41,6 +41,8 @@ export default function PrivacyPage() {
         <div>
           <p style={{ marginBottom: 12 }}>We use the information we collect to:</p>
           <ul style={{ paddingLeft: 20, display: 'flex', flexDirection: 'column', gap: 8 }}>
+            <li>Track your learning progress, saved molecules, and manage your account</li>
+            <li>Display your quiz scores and achievements on the public leaderboard</li>
             <li>Respond to your inquiries and provide customer support</li>
             <li>Improve and personalize your experience on the Site</li>
             <li>Analyze usage trends to enhance our features and content</li>

@@ -147,6 +147,7 @@ export default function AtomicModel3D({ element }) {
   const [isDark, setIsDark] = React.useState(false);
   
   const { playback, speed: globalSpeed } = globalState.settings.animation;
+  const globalLiteMode = globalState.settings.liteMode;
 
   React.useEffect(() => {
     const checkDark = () => {
@@ -173,21 +174,36 @@ export default function AtomicModel3D({ element }) {
       </div>
 
       <div className="absolute inset-0 z-10 w-full h-full">
-        <Canvas camera={{ position: [0, 8, 16], fov: 40 }}>
-          <AtomScene 
-            element={element} 
-            isDark={isDark} 
-            globalSpeed={globalSpeed} 
-            playback={playback} 
-          />
-          <OrbitControls 
-            enablePan={false} 
-            maxDistance={30} 
-            minDistance={5} 
-            autoRotate={playback === 'running'} 
-            autoRotateSpeed={0.5 * globalSpeed} 
-          />
-        </Canvas>
+        {globalLiteMode ? (
+          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', width: '100%', height: '100%', flexDirection: 'column' }}>
+            <div style={{ padding: 12, background: 'rgba(0,0,0,0.05)', borderRadius: 999, marginBottom: 16, fontSize: 12, fontWeight: 700, color: isDark ? '#9ca3af' : '#6b7280' }}>
+              Lite Mode Active
+            </div>
+            {element.bohr_model_image ? (
+              <img src={element.bohr_model_image} alt={`${element.name} bohr model`} style={{ width: 250, height: 250, objectFit: 'contain', filter: isDark ? 'invert(1)' : 'none' }} />
+            ) : (
+              <div style={{ width: 150, height: 150, borderRadius: '50%', border: `4px solid ${isDark ? '#4b5563' : '#cbd5e1'}`, display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 24, fontWeight: 800 }}>
+                {element.symbol}
+              </div>
+            )}
+          </div>
+        ) : (
+          <Canvas camera={{ position: [0, 8, 16], fov: 40 }}>
+            <AtomScene 
+              element={element} 
+              isDark={isDark} 
+              globalSpeed={globalSpeed} 
+              playback={playback} 
+            />
+            <OrbitControls 
+              enablePan={false} 
+              maxDistance={30} 
+              minDistance={5} 
+              autoRotate={playback === 'running'} 
+              autoRotateSpeed={0.5 * globalSpeed} 
+            />
+          </Canvas>
+        )}
       </div>
     </div>
   );

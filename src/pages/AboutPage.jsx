@@ -35,28 +35,44 @@ export default function AboutPage() {
       link: '/table'
     },
     {
-      title: '3D Atom Models & Orbitals',
-      desc: 'Step into microscopic dimensions to examine electron shells, nucleus representations, and quantum mechanics in interactive 3D.',
-      icon: <Atom size={26} color="#8b5cf6" />,
-      accent: '#8b5cf6',
-      bg: '#f5f3ff',
-      link: '/virtual-lab'
-    },
-    {
-      title: 'Virtual Chemistry Lab',
-      desc: 'Simulate chemical reactions, observe thermal and color transitions, and test solubility safely from any browser without hazards.',
+      title: 'Virtual Lab & 3D Atoms',
+      desc: 'Step into microscopic dimensions to examine electron shells and simulate chemical reactions safely from any browser.',
       icon: <FlaskConical size={26} color="#10b981" />,
       accent: '#10b981',
       bg: '#ecfdf5',
       link: '/virtual-lab'
     },
     {
-      title: 'Dynamic Worksheets & Quizzes',
-      desc: 'Reinforce learning with dynamically generated problem sets, printable PDF test sheets, and timed knowledge check quizzes.',
+      title: '3D Molecule Builder',
+      desc: 'Construct complex molecules atom by atom, visualize VSEPR geometries, and explore molecular properties interactively.',
+      icon: <Atom size={26} color="#8b5cf6" />,
+      accent: '#8b5cf6',
+      bg: '#f5f3ff',
+      link: '/molecule-builder'
+    },
+    {
+      title: 'Chemistry Calculators',
+      desc: 'Solve problems effortlessly with our equation balancer, molar mass calculator, gas laws analyzer, and solubility tools.',
       icon: <FileSpreadsheet size={26} color="#f59e0b" />,
       accent: '#f59e0b',
       bg: '#fffbeb',
+      link: '/tools'
+    },
+    {
+      title: 'Dynamic Worksheets',
+      desc: 'Reinforce learning with dynamically generated problem sets and printable PDF sheets tailored to various difficulty levels.',
+      icon: <BookOpen size={26} color="#06b6d4" />,
+      accent: '#06b6d4',
+      bg: '#ecfeff',
       link: '/worksheet'
+    },
+    {
+      title: 'Quizzes & Leaderboards',
+      desc: 'Test your knowledge with timed quizzes and compete with learners globally to climb the Valenzy leaderboard ranks.',
+      icon: <Zap size={26} color="#ec4899" />,
+      accent: '#ec4899',
+      bg: '#fdf2f8',
+      link: '/leaderboard'
     }
   ];
 
@@ -340,7 +356,7 @@ export default function AboutPage() {
               lineHeight: 1.75,
               marginBottom: 20
             }}>
-              Traditional periodic tables and textbooks can feel flat and disconnected from the real behavior of atoms and molecules. Valenzy changes that by combining an interactive periodic table, 3D atom models, virtual experiments, dynamic worksheets, and calculation tools into a single, easy-to-use platform.
+              Traditional periodic tables and textbooks can feel flat and disconnected from the real behavior of atoms and molecules. Valenzy changes that by combining an interactive periodic table, 3D molecule builders, virtual experiments, dynamic worksheets, and powerful calculation tools into a single, easy-to-use platform.
             </p>
 
             <p style={{

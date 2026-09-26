@@ -4,7 +4,7 @@ import { useAppContext } from '../context/AppContext';
 
 export default function SettingsPage() {
   const { state, dispatch } = useAppContext();
-  const { units, animation } = state.settings;
+  const { units, animation, liteMode, language } = state.settings;
   const [suggestion, setSuggestion] = useState('');
   const [suggestionTopic, setSuggestionTopic] = useState('New Tool');
   const [showAbout, setShowAbout] = useState(false);
@@ -172,6 +172,76 @@ export default function SettingsPage() {
         {/* === RIGHT COLUMN === */}
         <div style={{ display: 'flex', flexDirection: 'column', gap: 24 }}>
           
+          {/* Accessibility & Reach */}
+          <div style={sectionBoxStyle}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginBottom: isMobile ? 24 : 40 }}>
+              <div style={iconBoxStyle('#f3e8ff', '#9333ea', isMobile ? 32 : 40)}>
+                <svg width={isMobile ? 16 : 20} height={isMobile ? 16 : 20} fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+              </div>
+              <h3 style={{ fontSize: isMobile ? 16 : 18, fontWeight: 700, color: '#111827' }}>Accessibility & Reach</h3>
+            </div>
+
+            <div style={{ display: 'flex', alignItems: isMobile ? 'flex-start' : 'center', flexDirection: isMobile ? 'column' : 'row', justifyContent: 'space-between', marginBottom: 32, gap: 12 }}>
+              <span style={{ fontWeight: 600, color: '#374151', fontSize: 15 }}>Language (UI)</span>
+              <div style={{ display: 'flex', background: '#f1f5f9', borderRadius: 999, padding: 4, gap: 4, width: isMobile ? '100%' : 'auto' }}>
+                {['en', 'hi'].map((lang) => {
+                  const isActive = language === lang;
+                  return (
+                    <button
+                      key={lang}
+                      onClick={() => dispatch({ type: 'SET_LANGUAGE', payload: lang })}
+                      style={{
+                        flex: isMobile ? 1 : 'none',
+                        padding: '6px 16px', borderRadius: 999, border: 'none', fontSize: 13, fontWeight: 700,
+                        cursor: 'pointer', transition: '0.2s',
+                        background: isActive ? '#fff' : 'transparent',
+                        color: isActive ? '#111827' : '#94a3b8',
+                        boxShadow: isActive ? '0 1px 3px rgba(0,0,0,0.1)' : 'none',
+                      }}
+                    >
+                      {lang === 'en' ? 'English' : 'हिंदी'}
+                    </button>
+                  );
+                })}
+              </div>
+            </div>
+
+            <div style={{ display: 'flex', alignItems: isMobile ? 'flex-start' : 'center', flexDirection: isMobile ? 'column' : 'row', justifyContent: 'space-between', gap: 12 }}>
+              <div>
+                <span style={{ fontWeight: 600, color: '#374151', fontSize: 15, display: 'block' }}>Graphics Mode</span>
+                <span style={{ fontSize: 12, color: '#6b7280' }}>Use Lite mode for older devices.</span>
+              </div>
+              <div style={{ display: 'flex', background: '#f1f5f9', borderRadius: 999, padding: 4, gap: 4, width: isMobile ? '100%' : 'auto' }}>
+                <button
+                  onClick={() => !liteMode && dispatch({ type: 'TOGGLE_LITE_MODE' })}
+                  style={{
+                    flex: isMobile ? 1 : 'none',
+                    padding: '6px 16px', borderRadius: 999, border: 'none', fontSize: 13, fontWeight: 700,
+                    cursor: 'pointer', transition: '0.2s',
+                    background: !liteMode ? '#fff' : 'transparent',
+                    color: !liteMode ? '#111827' : '#94a3b8',
+                    boxShadow: !liteMode ? '0 1px 3px rgba(0,0,0,0.1)' : 'none',
+                  }}
+                >
+                  3D WebGL
+                </button>
+                <button
+                  onClick={() => liteMode && dispatch({ type: 'TOGGLE_LITE_MODE' })}
+                  style={{
+                    flex: isMobile ? 1 : 'none',
+                    padding: '6px 16px', borderRadius: 999, border: 'none', fontSize: 13, fontWeight: 700,
+                    cursor: 'pointer', transition: '0.2s',
+                    background: liteMode ? '#fff' : 'transparent',
+                    color: liteMode ? '#111827' : '#94a3b8',
+                    boxShadow: liteMode ? '0 1px 3px rgba(0,0,0,0.1)' : 'none',
+                  }}
+                >
+                  Lite (2D)
+                </button>
+              </div>
+            </div>
+          </div>
+
           {/* Global Units */}
           <div style={sectionBoxStyle}>
             <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginBottom: isMobile ? 24 : 48 }}>
