@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { db } from '../lib/firebase';
 import { collection, query, orderBy, onSnapshot, addDoc } from 'firebase/firestore';
 import { useAppContext } from '../context/AppContext';
+import { toast } from 'react-hot-toast';
 
 const C = {
   indigo: '#6366f1', indigoDark: '#4f46e5', indigoLight: '#e0e7ff',
@@ -52,7 +53,7 @@ export default function MoleculeGalleryPage() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    if (!user) return alert('You must be logged in to submit a molecule.');
+    if (!user) { toast.error('You must be logged in to submit a molecule.'); return; }
     
     setSubmitting(true);
     try {
@@ -122,7 +123,7 @@ export default function MoleculeGalleryPage() {
           
           <button 
             onClick={() => {
-              if (!user) alert("Please sign in to submit a molecule.");
+              if (!user) toast.error("Please sign in to submit a molecule.");
               else setShowSubmitModal(true);
             }}
             style={{

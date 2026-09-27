@@ -3,6 +3,7 @@ import { auth, googleProvider } from '../lib/firebase';
 import { signInWithEmailAndPassword, createUserWithEmailAndPassword, signInWithPopup } from 'firebase/auth';
 import { useAppContext } from '../context/AppContext';
 import { useNavigate } from 'react-router-dom';
+import { toast } from 'react-hot-toast';
 
 const C = {
   indigo: '#6366f1', indigoDark: '#4f46e5', indigoLight: '#e0e7ff',
@@ -36,7 +37,7 @@ export default function AuthPage() {
         navigate('/progress');
       } else {
         await createUserWithEmailAndPassword(auth, email, password);
-        alert('Account created successfully!');
+        toast.success('Account created successfully!');
         navigate('/progress');
       }
     } catch (error) {

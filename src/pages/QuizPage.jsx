@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef, useCallback } from 'react';
-import { NavLink, useSearchParams } from 'react-router-dom';
+import { NavLink, useSearchParams, useNavigate } from 'react-router-dom';
+import { toast } from 'react-hot-toast';
 import { motion, AnimatePresence } from 'framer-motion';
 import { TOPICS, DIFFICULTIES, getQuestions, getTopicStats } from '../data/quizData';
 import { useAppContext } from '../context/AppContext';
@@ -57,6 +58,7 @@ export default function QuizPage() {
   const [showExplain, setShowExplain] = useState(false);
   const [isRevisionRound, setIsRevisionRound] = useState(false);
 
+  const navigate = useNavigate();
   const [searchParams] = useSearchParams();
   const challengeScore = searchParams.get('challengeScore');
   const challengerName = searchParams.get('challenger');
@@ -145,12 +147,16 @@ export default function QuizPage() {
   useEffect(() => () => clearInterval(timerRef.current), []);
 
   const handleStart = async () => {
+    if (!user) {
+      navigate('/login');
+      return;
+    }
     setIsLoading(true);
     const result = await getQuestions(topic, difficulty === 'All' ? null : difficulty, count);
     setIsLoading(false);
     
     if (result.questions.length === 0) { 
-      alert('No questions found for this filter. Try changing topic or difficulty.'); 
+      toast.error('No questions found for this filter. Try changing topic or difficulty.'); 
       return; 
     }
     
@@ -634,7 +640,7 @@ export default function QuizPage() {
                     onClick={() => {
                       const shareUrl = `${window.location.origin}/quiz?topic=${topic}&difficulty=${difficulty}&count=${count}&challengeScore=${stats.score}&challenger=${encodeURIComponent(user.email?.split('@')[0] || 'Friend')}`;
                       navigator.clipboard.writeText(shareUrl);
-                      alert('Challenge link copied to clipboard! Share it with your friend.');
+                      toast.success('Challenge link copied to clipboard! Share it with your friend.');
                     }}
                     style={{
                       flex: 1, padding: '13px 0', borderRadius: 14,

@@ -4,6 +4,7 @@ import { collection, query, where, onSnapshot, doc, setDoc, getDocs } from 'fire
 import { signOut } from 'firebase/auth';
 import { useAppContext } from '../context/AppContext';
 import { useNavigate } from 'react-router-dom';
+import { toast } from 'react-hot-toast';
 
 const C = {
   indigo: '#6366f1', text: '#111827', sub: '#6b7280', border: '#e5e7eb', white: '#ffffff',
@@ -72,7 +73,8 @@ export default function ProgressPage() {
     const fName = formData.name?.trim();
 
     if (!uName || !loc) {
-      return alert("Please actually type a Username and Location! (The grey text is just an example)");
+      toast.error("Please actually type a Username and Location! (The grey text is just an example)");
+      return;
     }
     
     setSavingProfile(true);
@@ -89,7 +91,7 @@ export default function ProgressPage() {
       });
 
       if (isTaken) {
-        alert(`The username "@${uName}" is already taken! Please choose a different one.`);
+        toast.error(`The username "@${uName}" is already taken! Please choose a different one.`);
         setSavingProfile(false);
         return;
       }
@@ -104,7 +106,7 @@ export default function ProgressPage() {
       setIsEditing(false);
     } catch (e) {
       console.error("Failed to save profile:", e);
-      alert("Failed to save profile. Please check your Firebase rules.");
+      toast.error("Failed to save profile. Please check your Firebase rules.");
     } finally {
       setSavingProfile(false);
     }

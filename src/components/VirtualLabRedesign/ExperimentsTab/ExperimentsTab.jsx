@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Flame, Droplets, Zap, Clock, ArrowRight } from 'lucide-react';
 import FlameTestExperiment from './FlameTestExperiment';
+import { toast } from 'react-hot-toast';
 
 const EXPERIMENTS = [
   {
@@ -66,7 +67,7 @@ export default function ExperimentsTab() {
             className="group bg-[var(--bg-secondary)] backdrop-blur-md border border-[var(--border)] rounded-[2rem] overflow-hidden hover:bg-[var(--bg-card)] transition-all duration-300 hover:-translate-y-2 shadow-lg cursor-pointer flex flex-col"
             onClick={() => {
               if (exp.id === 'flame-test') setActiveExperiment(exp.id);
-              else alert('This experiment will be available in Phase 3!');
+              else toast.error('This experiment will be available in Phase 3!');
             }}
           >
             {/* Thumbnail Header */}

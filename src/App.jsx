@@ -1,5 +1,6 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { Toaster } from 'react-hot-toast';
 import { AppProvider } from './context/AppContext';
 import Navbar from './components/Navbar';
 import ScrollToTop from './components/ScrollToTop';
@@ -37,6 +38,7 @@ export default function App() {
       <BrowserRouter>
         <ScrollToTop />
         <div className="flex flex-col min-h-screen relative z-0">
+          <Toaster position="bottom-center" toastOptions={{ style: { fontFamily: "'Inter', sans-serif" } }} />
           <Navbar />
           <main className="flex-1">
               <Routes>

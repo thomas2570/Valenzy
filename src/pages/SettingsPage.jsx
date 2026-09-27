@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { useAppContext } from '../context/AppContext';
+import { toast } from 'react-hot-toast';
 
 export default function SettingsPage() {
   const { state, dispatch } = useAppContext();
@@ -54,11 +55,11 @@ export default function SettingsPage() {
         // Reset "Sent" state after 3 seconds
         setTimeout(() => setIsSent(false), 3000);
       } else {
-        alert("Failed to send suggestion. Please try again later.");
+        toast.error("Failed to send suggestion. Please try again later.");
       }
     } catch (err) {
       console.error(err);
-      alert("An error occurred. Check your connection.");
+      toast.error("An error occurred. Check your connection.");
     } finally {
       setIsSending(false);
     }

@@ -74,8 +74,22 @@ export default function Navbar() {
     { to: '/tools', label: t('nav_tools'), end: false },
     { to: '/ions', label: t('nav_ions'), end: false },
     { to: '/quiz', label: t('nav_quiz'), end: false, badge: true },
-    // Only show Account/Settings once auth state is known
-    ...(user !== undefined ? [{ to: user ? '/progress' : '/settings', label: user ? 'Account' : t('nav_settings'), end: false }] : []),
+    // Only show Account/Sign In once auth state is known
+    ...(user !== undefined ? [{ 
+      to: user ? '/progress' : '/login', 
+      label: user ? (
+        <span style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+          {user.photoURL ? (
+            <img src={user.photoURL} alt="Profile" style={{ width: 20, height: 20, borderRadius: '50%', objectFit: 'cover' }} />
+          ) : (
+            <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+            </svg>
+          )}
+        </span>
+      ) : 'Sign In', 
+      end: false 
+    }] : []),
   ];
 
   const handleNavClick = (e, to) => {
