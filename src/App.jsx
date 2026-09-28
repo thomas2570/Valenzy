@@ -5,6 +5,7 @@ import { AppProvider } from './context/AppContext';
 import Navbar from './components/Navbar';
 import ScrollToTop from './components/ScrollToTop';
 import HomePage from './pages/HomePage';
+import AnalyticsTracker from './components/AnalyticsTracker';
 import TablePage from './pages/TablePage';
 import BalancerPage from './pages/BalancerPage';
 import ToolsPage from './pages/ToolsPage';
@@ -37,6 +38,7 @@ export default function App() {
     <AppProvider>
       <BrowserRouter>
         <ScrollToTop />
+        <AnalyticsTracker />
         <div className="flex flex-col min-h-screen relative z-0">
           <Toaster position="bottom-center" toastOptions={{ style: { fontFamily: "'Inter', sans-serif" } }} />
           <Navbar />

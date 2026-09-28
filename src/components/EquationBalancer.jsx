@@ -238,6 +238,8 @@ const EXAMPLES = [
   'Al + H2SO4 = Al2(SO4)3 + H2',
 ];
 
+import { logEvent } from '../utils/analytics';
+
 export default function EquationBalancer() {
   const [equation, setEquation] = useState('');
   const [result, setResult] = useState(null);
@@ -249,6 +251,7 @@ export default function EquationBalancer() {
     const r = balanceEquation(input);
     setResult(r);
     setShowSteps(false);
+    logEvent('balance_equation', 'Tools', 'Equation Balancer', input);
   };
 
   const tryExample = (ex) => {
